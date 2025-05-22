@@ -1,0 +1,241 @@
+#statistics-impact {
+    padding: 6rem 2rem;
+    background-color: #F5F7FA;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #statistics-impact::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -25%;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(228, 179, 26, 0.1) 0%, rgba(228, 179, 26, 0) 70%);
+    z-index: 0;
+    border-radius: 50%;
+  }
+  
+  #statistics-impact .statistics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  #statistics-impact .statistics-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1E2A38;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #statistics-impact .statistics-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #E4B31A;
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
+  }
+  
+  #statistics-impact .statistics-subtitle {
+    font-size: 1.25rem;
+    text-align: center;
+    color: #4A4A4A;
+    margin-bottom: 4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #statistics-impact .statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  #statistics-impact .stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(30, 42, 56, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  #statistics-impact .stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(30, 42, 56, 0.12);
+  }
+  
+  #statistics-impact .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #007BFF;
+    z-index: 2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  #statistics-impact .stat-card:hover::before {
+    transform: scaleX(1);
+  }
+  
+  #statistics-impact .stat-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: #007BFF;
+  }
+  
+  #statistics-impact .stat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #statistics-impact .stat-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1E2A38;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  
+  #statistics-impact .counter-value {
+    display: inline-block;
+  }
+  
+  #statistics-impact .stat-label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1E2A38;
+    margin-bottom: 0.5rem;
+  }
+  
+  #statistics-impact .stat-description {
+    font-size: 0.95rem;
+    color: #4A4A4A;
+  }
+  
+  /* Animation entrée */
+  #statistics-impact .stat-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  #statistics-impact .stat-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  #statistics-impact .stat-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  #statistics-impact .stat-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  #statistics-impact .stat-card:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries pour la responsivité */
+  @media (max-width: 1200px) {
+    #statistics-impact .statistics-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #statistics-impact {
+      padding: 4rem 1.5rem;
+    }
+    
+    #statistics-impact .statistics-title {
+      font-size: 2rem;
+    }
+    
+    #statistics-impact .statistics-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #statistics-impact .statistics-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    #statistics-impact .stat-card {
+      padding: 1.5rem;
+    }
+    
+    #statistics-impact .stat-value {
+      font-size: 2.5rem;
+    }
+  }
+  
+  /* Support pour très petits écrans comme les montres connectées */
+  @media (max-width: 320px) {
+    #statistics-impact {
+      padding: 3rem 1rem;
+    }
+    
+    #statistics-impact .statistics-title {
+      font-size: 1.75rem;
+    }
+    
+    #statistics-impact .statistics-subtitle {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    #statistics-impact .stat-card {
+      padding: 1.25rem;
+    }
+    
+    #statistics-impact .stat-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+    
+    #statistics-impact .stat-value {
+      font-size: 2rem;
+    }
+    
+    #statistics-impact .stat-label {
+      font-size: 1rem;
+    }
+    
+    #statistics-impact .stat-description {
+      font-size: 0.85rem;
+    }
+  }

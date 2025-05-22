@@ -1,0 +1,370 @@
+/* AboutExpertiseTelecom.css */
+/* Styles spécifiques au composant AboutExpertiseTelecom */
+
+#about-expertise-telecom {
+    padding: 5rem 1.5rem;
+    background-color: #F5F7FA;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #about-expertise-telecom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #1E2A38 0%, #007BFF 100%);
+  }
+  
+  #about-expertise-telecom .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  #about-expertise-telecom.visible .container {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #about-expertise-telecom .section-title {
+    font-size: 2.5rem;
+    color: #1E2A38;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  #about-expertise-telecom .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #E4B31A;
+    border-radius: 2px;
+  }
+  
+  #about-expertise-telecom .accent-text {
+    color: #007BFF;
+  }
+  
+  #about-expertise-telecom .intro-text {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #4A4A4A;
+  }
+  
+  #about-expertise-telecom .intro-text strong {
+    color: #1E2A38;
+    font-weight: 600;
+  }
+  
+  #about-expertise-telecom .credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  #about-expertise-telecom .credential-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(30, 42, 56, 0.08);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  #about-expertise-telecom .credential-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(30, 42, 56, 0.12);
+  }
+  
+  #about-expertise-telecom .credential-card:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  #about-expertise-telecom .credential-card:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  #about-expertise-telecom .credential-card:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  #about-expertise-telecom .icon-wrapper {
+    background-color: rgba(0, 123, 255, 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  #about-expertise-telecom .credential-icon {
+    color: #007BFF;
+  }
+  
+  #about-expertise-telecom .credential-content h3 {
+    color: #1E2A38;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  #about-expertise-telecom .credential-content p {
+    color: #4A4A4A;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  #about-expertise-telecom .project-link {
+    display: inline-block;
+    color: #007BFF;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s;
+  }
+  
+  #about-expertise-telecom .project-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007BFF;
+    transition: width 0.3s ease;
+  }
+  
+  #about-expertise-telecom .project-link:hover {
+    color: #E4B31A;
+  }
+  
+  #about-expertise-telecom .project-link:hover::after {
+    width: 100%;
+    background-color: #E4B31A;
+  }
+  
+  #about-expertise-telecom .project-link:focus {
+    outline: 2px solid #007BFF;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  
+  #about-expertise-telecom .expertise-conclusion {
+    background-color: #1E2A38;
+    color: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: zoomIn 0.6s ease 0.8s forwards;
+  }
+  
+  #about-expertise-telecom .conclusion-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E4B31A;
+  }
+  
+  #about-expertise-telecom .expertise-conclusion p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+  
+  #about-expertise-telecom .expertise-conclusion strong {
+    color: #E4B31A;
+    font-weight: 600;
+  }
+  
+  #about-expertise-telecom .expertise-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 1s forwards;
+  }
+  
+  #about-expertise-telecom .badge {
+    background-color: white;
+    border: 2px solid #007BFF;
+    border-radius: 30px;
+    padding: 0.5rem 1.2rem;
+    color: #1E2A38;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  #about-expertise-telecom .badge:hover {
+    background-color: #007BFF;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  }
+  
+  #about-expertise-telecom .badge svg {
+    color: inherit;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media screen and (max-width: 1024px) {
+    #about-expertise-telecom .section-title {
+      font-size: 2.2rem;
+    }
+    
+    #about-expertise-telecom .intro-text {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #about-expertise-telecom {
+      padding: 4rem 1.25rem;
+    }
+    
+    #about-expertise-telecom .section-title {
+      font-size: 2rem;
+    }
+    
+    #about-expertise-telecom .credentials-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    #about-expertise-telecom .expertise-conclusion {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    #about-expertise-telecom .expertise-badges {
+      justify-content: center;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #about-expertise-telecom {
+      padding: 3rem 1rem;
+    }
+    
+    #about-expertise-telecom .section-title {
+      font-size: 1.8rem;
+    }
+    
+    #about-expertise-telecom .credential-card {
+      padding: 1.5rem;
+    }
+    
+    #about-expertise-telecom .expertise-conclusion p {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Support pour montres connectées et très petits écrans */
+  @media screen and (max-width: 320px) {
+    #about-expertise-telecom {
+      padding: 2rem 0.75rem;
+    }
+    
+    #about-expertise-telecom .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    #about-expertise-telecom .intro-text {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    #about-expertise-telecom .icon-wrapper {
+      width: 50px;
+      height: 50px;
+    }
+    
+    #about-expertise-telecom .credential-content h3 {
+      font-size: 1.1rem;
+    }
+    
+    #about-expertise-telecom .credential-content p {
+      font-size: 0.95rem;
+    }
+    
+    #about-expertise-telecom .conclusion-icon {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+    }
+    
+    #about-expertise-telecom .badge {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+    }
+  }

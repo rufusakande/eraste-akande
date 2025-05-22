@@ -1,0 +1,167 @@
+#alternativeContacts {
+    padding: 5rem 2rem;
+    background-color: white;
+    position: relative;
+  }
+  
+  #alternativeContacts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(30, 42, 56, 0.1), transparent);
+  }
+  
+  #alternativeContacts .alternative-contacts__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  #alternativeContacts.visible .alternative-contacts__container {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #alternativeContacts .alternative-contacts__title {
+    color: #1E2A38;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    position: relative;
+  }
+  
+  #alternativeContacts .alternative-contacts__title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #E4B31A;
+    margin: 1rem auto 0;
+  }
+  
+  #alternativeContacts .alternative-contacts__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  #alternativeContacts .alternative-contacts__card {
+    background-color: #F5F7FA;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px rgba(30, 42, 56, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #alternativeContacts .alternative-contacts__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(30, 42, 56, 0.12);
+  }
+  
+  #alternativeContacts .alternative-contacts__icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(0, 123, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #007BFF;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  #alternativeContacts .alternative-contacts__card:hover .alternative-contacts__icon-wrapper {
+    background-color: #007BFF;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  #alternativeContacts .alternative-contacts__card-title {
+    font-size: 1.5rem;
+    color: #1E2A38;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  #alternativeContacts .alternative-contacts__text {
+    color: #4A4A4A;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  #alternativeContacts .alternative-contacts__link {
+    color: #007BFF;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+    margin-top: auto;
+    word-break: break-all;
+  }
+  
+  #alternativeContacts .alternative-contacts__link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  #alternativeContacts .alternative-contacts__location {
+    color: #4A4A4A;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: auto;
+  }
+  
+  @media (max-width: 992px) {
+    #alternativeContacts .alternative-contacts__grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #alternativeContacts {
+      padding: 4rem 1.5rem;
+    }
+    
+    #alternativeContacts .alternative-contacts__title {
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #alternativeContacts .alternative-contacts__grid {
+      grid-template-columns: 1fr;
+    }
+    
+    #alternativeContacts .alternative-contacts__card {
+      padding: 2rem 1.5rem;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    #alternativeContacts {
+      padding: 3rem 1rem;
+    }
+    
+    #alternativeContacts .alternative-contacts__card {
+      padding: 1.5rem 1rem;
+    }
+    
+    #alternativeContacts .alternative-contacts__card-title {
+      font-size: 1.3rem;
+    }
+  }

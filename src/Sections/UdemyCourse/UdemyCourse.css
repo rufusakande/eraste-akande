@@ -1,0 +1,206 @@
+/* UdemyCourse.css */
+#udemy-course {
+    padding: 5rem 1rem;
+    background-color: #fff;
+  }
+  
+  #udemy-course .udemy-course__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  #udemy-course .udemy-course__image-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(30, 42, 56, 0.15);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  #udemy-course .udemy-course__image-container.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  #udemy-course .udemy-course__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
+  #udemy-course .udemy-course__image-container:hover .udemy-course__image {
+    transform: scale(1.03);
+  }
+  
+  #udemy-course .udemy-course__badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #E4B31A;
+    color: #1E2A38;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    box-shadow: 0 4px 8px rgba(228, 179, 26, 0.3);
+  }
+  
+  #udemy-course .udemy-course__badge-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  #udemy-course .udemy-course__content {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition-delay: 0.2s;
+  }
+  
+  #udemy-course .udemy-course__content.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  #udemy-course .udemy-course__title {
+    font-size: 2.5rem;
+    color: #1E2A38;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  #udemy-course .udemy-course__description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #4A4A4A;
+    margin-bottom: 2rem;
+  }
+  
+  #udemy-course .udemy-course__features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  #udemy-course .udemy-course__feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #udemy-course .udemy-course__feature-icon {
+    color: #007BFF;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+  }
+  
+  #udemy-course .udemy-course__feature-text {
+    font-size: 1.125rem;
+    color: #4A4A4A;
+  }
+  
+  #udemy-course .udemy-course__cta-container {
+    margin-top: 2rem;
+  }
+  
+  #udemy-course .udemy-course__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.25);
+  }
+  
+  #udemy-course .udemy-course__cta:hover,
+  #udemy-course .udemy-course__cta:focus {
+    background-color: #0069d9;
+    box-shadow: 0 6px 10px rgba(0, 123, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    #udemy-course .udemy-course__title {
+      font-size: 2.25rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #udemy-course .udemy-course__container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    #udemy-course .udemy-course__title {
+      font-size: 2rem;
+    }
+    
+    #udemy-course .udemy-course__description {
+      font-size: 1rem;
+    }
+    
+    #udemy-course .udemy-course__feature-text {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #udemy-course {
+      padding: 3rem 1rem;
+    }
+    
+    #udemy-course .udemy-course__title {
+      font-size: 1.75rem;
+    }
+    
+    #udemy-course .udemy-course__badge {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+  }
+  
+  /* Support for small screens like watches */
+  @media (max-width: 320px) {
+    #udemy-course {
+      padding: 2rem 0.75rem;
+    }
+    
+    #udemy-course .udemy-course__title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    #udemy-course .udemy-course__description {
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    #udemy-course .udemy-course__feature-text {
+      font-size: 0.875rem;
+    }
+    
+    #udemy-course .udemy-course__cta {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
+  }

@@ -1,0 +1,242 @@
+/* AboutRecognition.css */
+#aboutRecognition {
+    background-color: #fff;
+    padding: 6rem 0;
+    position: relative;
+  }
+  
+  #aboutRecognition .about-recognition__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  #aboutRecognition.visible .about-recognition__container {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #aboutRecognition .about-recognition__title {
+    font-size: 2.5rem;
+    color: #1E2A38;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    font-weight: 700;
+  }
+  
+  #aboutRecognition .about-recognition__title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #E4B31A;
+    border-radius: 2px;
+  }
+  
+  #aboutRecognition .about-recognition__badges {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  #aboutRecognition .about-recognition__badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  #aboutRecognition .about-recognition__badge:hover {
+    transform: translateY(-10px);
+  }
+  
+  #aboutRecognition .about-recognition__badge-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7ea 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
+  }
+  
+  #aboutRecognition .about-recognition__badge-image--gold {
+    background: linear-gradient(135deg, #ffd166 0%, #E4B31A 100%);
+  }
+  
+  #aboutRecognition .about-recognition__badge:hover .about-recognition__badge-image {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  #aboutRecognition .about-recognition__badge-image::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    border: 2px dashed rgba(0, 123, 255, 0.2);
+    z-index: -1;
+    animation: rotate 30s linear infinite;
+  }
+  
+  #aboutRecognition .about-recognition__badge-image--gold::after {
+    border-color: rgba(228, 179, 26, 0.3);
+  }
+  
+  #aboutRecognition .about-recognition__badge-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  #aboutRecognition .about-recognition__badge-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #1E2A38;
+    margin-bottom: 1rem;
+  }
+  
+  #aboutRecognition .about-recognition__badge-desc {
+    font-size: 1rem;
+    color: #4A4A4A;
+    line-height: 1.6;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 992px) {
+    #aboutRecognition {
+      padding: 5rem 0;
+    }
+    
+    #aboutRecognition .about-recognition__title {
+      font-size: 2.25rem;
+    }
+    
+    #aboutRecognition .about-recognition__badges {
+      gap: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #aboutRecognition {
+      padding: 4rem 0;
+    }
+    
+    #aboutRecognition .about-recognition__title {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    #aboutRecognition .about-recognition__badge {
+      max-width: 250px;
+    }
+    
+    #aboutRecognition .about-recognition__badge-image {
+      width: 130px;
+      height: 130px;
+    }
+    
+    #aboutRecognition .about-recognition__badge-icon {
+      width: 70px;
+      height: 70px;
+    }
+    
+    #aboutRecognition .about-recognition__badge-title {
+      font-size: 1.25rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #aboutRecognition {
+      padding: 3rem 0;
+    }
+    
+    #aboutRecognition .about-recognition__title {
+      font-size: 1.75rem;
+    }
+    
+    #aboutRecognition .about-recognition__badges {
+      gap: 3rem;
+    }
+    
+    #aboutRecognition .about-recognition__badge {
+      max-width: 100%;
+    }
+    
+    #aboutRecognition .about-recognition__badge-image {
+      width: 120px;
+      height: 120px;
+    }
+    
+    #aboutRecognition .about-recognition__badge-icon {
+      width: 60px;
+      height: 60px;
+    }
+    
+    #aboutRecognition .about-recognition__badge-title {
+      font-size: 1.2rem;
+    }
+    
+    #aboutRecognition .about-recognition__badge-desc {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    #aboutRecognition {
+      padding: 2.5rem 0;
+    }
+    
+    #aboutRecognition .about-recognition__container {
+      padding: 0 1rem;
+    }
+    
+    #aboutRecognition .about-recognition__title {
+      font-size: 1.5rem;
+    }
+    
+    #aboutRecognition .about-recognition__badge-image {
+      width: 100px;
+      height: 100px;
+    }
+    
+    #aboutRecognition .about-recognition__badge-icon {
+      width: 50px;
+      height: 50px;
+    }
+    
+    #aboutRecognition .about-recognition__badge-title {
+      font-size: 1.1rem;
+    }
+    
+    #aboutRecognition .about-recognition__badge-desc {
+      font-size: 0.9rem;
+    }
+  }

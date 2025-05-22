@@ -1,0 +1,234 @@
+/* PointsForts.css */
+#points-forts {
+    background-color: #F5F7FA;
+    padding: 5rem 0;
+    position: relative;
+  }
+  
+  #points-forts .points-forts-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  #points-forts .points-forts-title {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1E2A38;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  #points-forts .points-forts-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #E4B31A;
+    margin: 1rem auto 0;
+    border-radius: 1.5px;
+  }
+  
+  #points-forts .points-forts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  #points-forts .point-fort-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #points-forts .point-fort-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #007BFF, #E4B31A);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  
+  #points-forts .point-fort-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  #points-forts .point-fort-card:hover::before {
+    transform: scaleX(1);
+  }
+  
+  #points-forts .point-fort-icon {
+    margin-bottom: 1.5rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 50%;
+    color: #007BFF;
+    transition: all 0.3s ease;
+  }
+  
+  #points-forts .point-fort-card:hover .point-fort-icon {
+    background-color: #007BFF;
+    color: #FFFFFF;
+    transform: scale(1.1);
+  }
+  
+  #points-forts .point-fort-card:nth-child(2) .point-fort-icon {
+    background-color: rgba(228, 179, 26, 0.1);
+    color: #E4B31A;
+  }
+  
+  #points-forts .point-fort-card:nth-child(2):hover .point-fort-icon {
+    background-color: #E4B31A;
+    color: #FFFFFF;
+  }
+  
+  #points-forts .point-fort-card:nth-child(3) .point-fort-icon {
+    background-color: rgba(30, 42, 56, 0.1);
+    color: #1E2A38;
+  }
+  
+  #points-forts .point-fort-card:nth-child(3):hover .point-fort-icon {
+    background-color: #1E2A38;
+    color: #FFFFFF;
+  }
+  
+  #points-forts .point-fort-title {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1E2A38;
+  }
+  
+  #points-forts .point-fort-description {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4A4A4A;
+  }
+  
+  /* Animation pour les cartes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    #points-forts {
+      padding: 4rem 0;
+    }
+    
+    #points-forts .points-forts-title {
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #points-forts {
+      padding: 3.5rem 0;
+    }
+    
+    #points-forts .points-forts-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    #points-forts .points-forts-title {
+      font-size: 1.75rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #points-forts {
+      padding: 3rem 0;
+    }
+    
+    #points-forts .points-forts-container {
+      padding: 0 1.25rem;
+    }
+    
+    #points-forts .points-forts-title {
+      font-size: 1.5rem;
+    }
+    
+    #points-forts .point-fort-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+  
+  /* Pour les montres connectées et très petits écrans */
+  @media (max-width: 320px) {
+    #points-forts {
+      padding: 2.5rem 0;
+    }
+    
+    #points-forts .points-forts-title {
+      font-size: 1.35rem;
+    }
+    
+    #points-forts .point-fort-icon {
+      width: 60px;
+      height: 60px;
+    }
+    
+    #points-forts .point-fort-title {
+      font-size: 1.1rem;
+    }
+    
+    #points-forts .point-fort-description {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Optimisations pour accessibilité */
+  #points-forts .point-fort-card:focus-within {
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
+  }
+  
+  /* Préférence pour réduction des mouvements */
+  @media (prefers-reduced-motion: reduce) {
+    #points-forts .point-fort-card {
+      transition-duration: 0.01ms !important;
+    }
+    
+    #points-forts .point-fort-card:hover {
+      transform: none !important;
+    }
+    
+    #points-forts .point-fort-icon {
+      transition-duration: 0.01ms !important;
+    }
+    
+    #points-forts .point-fort-card:hover .point-fort-icon {
+      transform: none !important;
+    }
+  }

@@ -1,0 +1,473 @@
+/* Solutions.css - Styles for the Solutions page */
+
+/* Base styles */
+#solutions {
+    --primary-color: #1E2A38;
+    --secondary-color: #007BFF;
+    --accent-color: #E4B31A;
+    --bg-light: #F5F7FA;
+    --text-color: #4A4A4A;
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.08);
+    --transition-fast: 0.3s ease;
+    --transition-normal: 0.5s ease;
+    --border-radius: 8px;
+    color: var(--text-color);
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  #solutions .solutions-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  #solutions h1, 
+  #solutions h2, 
+  #solutions h3, 
+  #solutions h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+    line-height: 1.3;
+  }
+  
+  #solutions h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  
+  #solutions h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  #solutions h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin-top: 0.75rem;
+  }
+  
+  #solutions h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    margin-bottom: 0.75rem;
+  }
+  
+  #solutions p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Button styles */
+  #solutions .solutions-primary-btn, 
+  #solutions .solutions-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+    gap: 8px;
+  }
+  
+  #solutions .solutions-primary-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 2px solid var(--secondary-color);
+  }
+  
+  #solutions .solutions-primary-btn:hover, 
+  #solutions .solutions-primary-btn:focus {
+    background-color: #0069e0;
+    border-color: #0069e0;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  #solutions .solutions-secondary-btn {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+  }
+  
+  #solutions .solutions-secondary-btn:hover, 
+  #solutions .solutions-secondary-btn:focus {
+    background-color: rgba(0, 123, 255, 0.05);
+    transform: translateY(-2px);
+  }
+  
+  /* Animation for elements */
+  #solutions [class*="-hero"],
+  #solutions [class*="-main"],
+  #solutions [class*="-process"],
+  #solutions [class*="-cases"],
+  #solutions [class*="-cta-section"] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+  }
+  
+  #solutions .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Hero section */
+  #solutions .solutions-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2a3b52 100%);
+    color: white;
+    padding: clamp(3rem, 15vh, 8rem) 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #solutions .solutions-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('/assets/data-pattern.svg');
+    background-size: cover;
+    opacity: 0.08;
+    z-index: 1;
+  }
+  
+  #solutions .solutions-hero .solutions-container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  #solutions .solutions-hero h1 {
+    color: white;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+  }
+  
+  #solutions .solutions-hero p {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  #solutions .solutions-hero h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 1.5rem auto 1.75rem;
+  }
+  
+  /* Main solutions section */
+  #solutions .solutions-main {
+    padding: clamp(3rem, 10vh, 6rem) 0;
+    background-color: var(--bg-light);
+  }
+  
+  #solutions .solutions-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    color: #6c757d;
+    margin-bottom: 3rem;
+    max-width: 800px;
+  }
+  
+  #solutions .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  #solutions .solution-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    height: 100%;
+  }
+  
+  #solutions .solution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  #solutions .solution-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(0, 123, 255, 0.1);
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  #solutions .solution-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  #solutions .solution-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+  }
+  
+  #solutions .solution-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  #solutions .solution-features li svg {
+    color: var(--secondary-color);
+    flex-shrink: 0;
+  }
+  
+  /* Process steps section */
+  #solutions .solutions-process {
+    padding: clamp(3rem, 10vh, 6rem) 0;
+    background-color: white;
+  }
+  
+  #solutions .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  #solutions .process-step {
+    position: relative;
+    padding: 0 1rem;
+  }
+  
+  #solutions .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+  }
+  
+  /* Add connecting lines between steps */
+  #solutions .process-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background-color: #e9ecef;
+    z-index: 0;
+  }
+  
+  /* Case Studies section */
+  #solutions .solutions-cases {
+    padding: clamp(3rem, 10vh, 6rem) 0;
+    background-color: var(--bg-light);
+  }
+  
+  #solutions .case-study {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  #solutions .case-content {
+    padding: 2.5rem;
+  }
+  
+  #solutions .case-client {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #6c757d;
+    margin: 0 0 1rem;
+  }
+  
+  #solutions .case-content h4 {
+    margin: 1.5rem 0 0.75rem;
+  }
+  
+  #solutions .case-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #solutions .case-content ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  #solutions .case-link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-decoration: none;
+    gap: 0.5rem;
+    transition: gap var(--transition-fast);
+  }
+  
+  #solutions .case-link:hover {
+    gap: 0.75rem;
+  }
+  
+  #solutions .case-image {
+    position: relative;
+    background-color: #f0f4f8;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #solutions .case-placeholder {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  #solutions .case-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+  }
+  
+  #solutions .case-study:hover .case-placeholder img {
+    transform: scale(1.05);
+  }
+  
+  /* CTA section */
+  #solutions .solutions-cta-section {
+    padding: clamp(3rem, 10vh, 6rem) 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2a3b52 100%);
+    color: white;
+    text-align: center;
+  }
+  
+  #solutions .solutions-cta-section h2 {
+    color: white;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #solutions .solutions-cta-section h2::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #solutions .solutions-cta-section p {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  #solutions .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    #solutions .case-study {
+      grid-template-columns: 1fr;
+    }
+    
+    #solutions .case-image {
+      min-height: 300px;
+      order: -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #solutions .process-step:not(:last-child)::after {
+      display: none;
+    }
+    
+    #solutions .process-steps {
+      gap: 3rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #solutions .solutions-container {
+      padding: 0 16px;
+    }
+    
+    #solutions .cta-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    #solutions .solutions-primary-btn,
+    #solutions .solutions-secondary-btn {
+      width: 100%;
+    }
+  }
+  
+  /* Extreme small screen (smartwatches) */
+  @media (max-width: 320px) {
+    #solutions h1 {
+      font-size: 1.5rem;
+    }
+    
+    #solutions h2 {
+      font-size: 1.25rem;
+    }
+    
+    #solutions h3 {
+      font-size: 1.125rem;
+    }
+    
+    #solutions p {
+      font-size: 0.875rem;
+    }
+    
+    #solutions .solutions-subtitle {
+      font-size: 0.875rem;
+    }
+    
+    #solutions .solutions-primary-btn,
+    #solutions .solutions-secondary-btn {
+      padding: 8px 16px;
+      font-size: 0.875rem;
+    }
+    
+    #solutions .solution-card,
+    #solutions .case-content {
+      padding: 1.25rem;
+    }
+  }

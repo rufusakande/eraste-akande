@@ -1,0 +1,193 @@
+/* src/components/portfolio/ProjectFilters.css */
+#project-filters {
+    background-color: #F5F7FA;
+    padding: 3rem 1.5rem;
+    position: relative;
+  }
+  
+  #project-filters .project-filters__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  #project-filters .project-filters__heading {
+    color: #1E2A38;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  #project-filters .project-filters__heading::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #E4B31A;
+  }
+  
+  #project-filters .project-filters__filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+  }
+  
+  #project-filters .project-filters__filter {
+    background-color: transparent;
+    border: 2px solid #1E2A38;
+    border-radius: 30px;
+    color: #1E2A38;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #project-filters .project-filters__filter::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #007BFF;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  #project-filters .project-filters__filter:hover {
+    color: white;
+    border-color: #007BFF;
+  }
+  
+  #project-filters .project-filters__filter:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  #project-filters .project-filters__filter:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+  }
+  
+  #project-filters .project-filters__filter.active {
+    background-color: #1E2A38;
+    color: white;
+    border-color: #1E2A38;
+  }
+  
+  #project-filters .project-filters__filter.active::before {
+    transform: scaleX(0);
+  }
+  
+  /* Animation states */
+  #project-filters .project-filters__filters {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  #project-filters .project-filters__filters.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #project-filters .project-filters__filter {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  #project-filters .project-filters__filters.animate .project-filters__filter {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #project-filters .project-filters__filters.animate .project-filters__filter:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  
+  #project-filters .project-filters__filters.animate .project-filters__filter:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  
+  #project-filters .project-filters__filters.animate .project-filters__filter:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  
+  #project-filters .project-filters__filters.animate .project-filters__filter:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  
+  #project-filters .project-filters__filters.animate .project-filters__filter:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    #project-filters .project-filters__heading {
+      font-size: 1.75rem;
+    }
+    
+    #project-filters .project-filters__filters {
+      gap: 0.5rem;
+    }
+    
+    #project-filters .project-filters__filter {
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #project-filters {
+      padding: 2rem 1rem;
+    }
+    
+    #project-filters .project-filters__filters {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+      max-width: 100%;
+      padding-bottom: 1rem;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+    
+    #project-filters .project-filters__filters::-webkit-scrollbar {
+      height: 4px;
+    }
+    
+    #project-filters .project-filters__filters::-webkit-scrollbar-thumb {
+      background-color: rgba(30, 42, 56, 0.3);
+      border-radius: 4px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    #project-filters .project-filters__heading {
+      font-size: 1.5rem;
+    }
+    
+    #project-filters .project-filters__filter {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.85rem;
+    }
+  }

@@ -1,0 +1,295 @@
+#portfolio-cta {
+    padding: 6rem 2rem;
+    background-color: #1E2A38;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #portfolio-cta::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 40%;
+    height: 70%;
+    background: radial-gradient(ellipse, rgba(0, 123, 255, 0.2) 0%, rgba(0, 123, 255, 0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  #portfolio-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 50%;
+    height: 80%;
+    background: radial-gradient(ellipse, rgba(228, 179, 26, 0.1) 0%, rgba(228, 179, 26, 0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  #portfolio-cta .cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  #portfolio-cta .cta-content {
+    max-width: 600px;
+  }
+  
+  #portfolio-cta .cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  #portfolio-cta .cta-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #E4B31A;
+    margin: 0.75rem 0 0;
+    border-radius: 2px;
+  }
+  
+  #portfolio-cta .cta-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  #portfolio-cta .cta-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  #portfolio-cta .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #portfolio-cta .cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: -1;
+  }
+  
+  #portfolio-cta .cta-btn:hover::before,
+  #portfolio-cta .cta-btn:focus::before {
+    width: 300%;
+    height: 300%;
+  }
+  
+  #portfolio-cta .cta-btn.primary {
+    background-color: #E4B31A;
+    color: #1E2A38;
+  }
+  
+  #portfolio-cta .cta-btn.primary:hover,
+  #portfolio-cta .cta-btn.primary:focus {
+    background-color: #c59b16;
+    box-shadow: 0 6px 15px rgba(228, 179, 26, 0.3);
+    transform: translateY(-3px);
+  }
+  
+  #portfolio-cta .cta-btn.secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  #portfolio-cta .cta-btn.secondary:hover,
+  #portfolio-cta .cta-btn.secondary:focus {
+    border-color: #007BFF;
+    color: #007BFF;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  #portfolio-cta .cta-decoration {
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #portfolio-cta .cta-shape {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background: linear-gradient(135deg, #007BFF 0%, rgba(0, 123, 255, 0.2) 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: morphing 15s infinite ease-in-out;
+    box-shadow: 0 0 50px rgba(0, 123, 255, 0.3);
+  }
+  
+  @keyframes morphing {
+    0% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    25% {
+      border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+    50% {
+      border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    }
+    75% {
+      border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+    100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+  }
+  
+  /* Animation entrée */
+  #portfolio-cta .cta-content {
+    animation: slideInLeft 0.8s ease forwards;
+  }
+  
+  #portfolio-cta .cta-decoration {
+    animation: slideInRight 0.8s ease forwards;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Media Queries pour la responsivité */
+  @media (max-width: 1200px) {
+    #portfolio-cta .cta-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    #portfolio-cta .cta-content {
+      max-width: 100%;
+      margin-bottom: 3rem;
+    }
+    
+    #portfolio-cta .cta-decoration {
+      width: 100%;
+    }
+    
+    #portfolio-cta .cta-title::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    #portfolio-cta .cta-actions {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #portfolio-cta {
+      padding: 4rem 1.5rem;
+    }
+    
+    #portfolio-cta .cta-title {
+      font-size: 2rem;
+    }
+    
+    #portfolio-cta .cta-description {
+      font-size: 1.1rem;
+    }
+    
+    #portfolio-cta .cta-shape {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #portfolio-cta .cta-title {
+      font-size: 1.75rem;
+    }
+    
+    #portfolio-cta .cta-description {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    #portfolio-cta .cta-btn {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    #portfolio-cta .cta-shape {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  /* Support pour très petits écrans comme les montres connectées */
+  @media (max-width: 320px) {
+    #portfolio-cta {
+      padding: 3rem 1rem;
+    }
+    
+    #portfolio-cta .cta-title {
+      font-size: 1.5rem;
+    }
+    
+    #portfolio-cta .cta-description {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    #portfolio-cta .cta-btn {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.9rem;
+    }
+    
+    #portfolio-cta .cta-shape {
+      width: 150px;
+      height: 150px;
+    }
+  }

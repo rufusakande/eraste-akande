@@ -1,0 +1,113 @@
+#contactBanner {
+    position: relative;
+    background: linear-gradient(45deg, #1E2A38 0%, #1b3553 100%);
+    color: #ffffff;
+    padding: 6rem 2rem;
+    overflow: hidden;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #contactBanner .contact-banner__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    width: 100%;
+  }
+  
+  #contactBanner.visible .contact-banner__container {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #contactBanner .contact-banner__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+
+  @media screen and (max-width : 1000px) {
+    #contactBanner .contact-banner__title{
+      margin-top: 80px;
+    }
+  }
+  
+  #contactBanner .contact-banner__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #E4B31A;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease-out 0.3s;
+  }
+  
+  #contactBanner.visible .contact-banner__title::after {
+    transform: scaleX(1);
+  }
+  
+  #contactBanner .contact-banner__subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: 650px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  #contactBanner .contact-banner__decoration {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(0, 123, 255, 0.1);
+    z-index: -1;
+  }
+  
+  #contactBanner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    #contactBanner {
+      padding: 4rem 1.5rem;
+    }
+    
+    #contactBanner .contact-banner__decoration {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    #contactBanner {
+      padding: 3rem 1rem;
+      min-height: 220px;
+    }
+    
+    #contactBanner .contact-banner__title {
+      margin-bottom: 1rem;
+    }
+    
+    #contactBanner .contact-banner__subtitle {
+      margin-bottom: 1rem;
+    }
+  }

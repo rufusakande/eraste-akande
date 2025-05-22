@@ -1,0 +1,60 @@
+// TrainingCTA.jsx
+import React, { useEffect, useRef } from 'react';
+import { ArrowRight } from 'lucide-react';
+import './TrainingCTA.css';
+
+const TrainingCTA = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
+  return (
+    <section id="training-cta" className="training-cta" ref={sectionRef}>
+      <div className="training-cta__container">
+        <h2 className="training-cta__title">Prêt à développer vos compétences ?</h2>
+        <p className="training-cta__description">
+          Que vous soyez un professionnel souhaitant améliorer vos compétences ou une entreprise 
+          cherchant à former votre équipe, j'ai la solution adaptée à vos besoins.
+        </p>
+        
+        <div className="training-cta__buttons">
+          <a 
+            href="#training-list"
+            rel="noopener noreferrer"
+            className="training-cta__button training-cta__button--primary"
+          >
+            Mes Formation
+            <ArrowRight className="training-cta__button-icon" aria-hidden="true" />
+          </a>
+          
+          <a 
+            href="contact" 
+            className="training-cta__button training-cta__button--secondary"
+          >
+            Me contacter
+            <ArrowRight className="training-cta__button-icon" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TrainingCTA;

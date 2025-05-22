@@ -1,0 +1,356 @@
+/* TrainingList.css */
+/* Variables de couleurs basées sur la charte graphique */
+:root {
+    --primary-color: #1E2A38;     /* Bleu Profond */
+    --secondary-color: #007BFF;   /* Bleu Électrique */
+    --background-color: #F5F7FA;  /* Gris Clair */
+    --text-color: #4A4A4A;        /* Gris Texte */
+    --accent-color: #E4B31A;      /* Or Doux */
+    --shadow-color: rgba(30, 42, 56, 0.1);
+    --transition-speed: 0.3s;
+  }
+  
+  /* Section principale */
+  #training-list {
+    background-color: var(--background-color);
+    padding: 4rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #training-list .training-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #training-list::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.05), rgba(228, 179, 26, 0.05));
+    z-index: 0;
+  }
+  
+  #training-list::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(to left, rgba(0, 123, 255, 0.05), rgba(228, 179, 26, 0.05));
+    z-index: 0;
+  }
+  
+  /* Titres */
+  #training-list .training-list-heading {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  #training-list .training-list-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+    border-radius: 2px;
+  }
+  
+  #training-list .training-list-subheading {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Grille de formations */
+  #training-list .training-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* Cartes de formation */
+  #training-list .training-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px var(--shadow-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    cursor: pointer;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  #training-list .training-card-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  #training-list .training-card:nth-child(1) { transition-delay: 0.1s; }
+  #training-list .training-card:nth-child(2) { transition-delay: 0.2s; }
+  #training-list .training-card:nth-child(3) { transition-delay: 0.3s; }
+  #training-list .training-card:nth-child(4) { transition-delay: 0.4s; }
+  
+  #training-list .training-card:hover,
+  #training-list .training-card:focus {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px var(--shadow-color);
+    outline: none;
+  }
+  
+  #training-list .training-card:focus-visible {
+    outline: 3px solid var(--secondary-color);
+  }
+  
+  #training-list .training-card-active {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px var(--shadow-color);
+  }
+  
+  /* En-tête de carte */
+  #training-list .training-card-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), #2a3c50);
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #training-list .training-card-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  #training-list .training-card-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--accent-color);
+    stroke-width: 2px;
+  }
+  
+  #training-list .training-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+    line-height: 1.3;
+  }
+  
+  /* Contenu de carte */
+  #training-list .training-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: white;
+  }
+  
+  #training-list .training-card-description {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  /* Footer de carte */
+  #training-list .training-card-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #training-list .training-card-platform {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  #training-list .training-card-platform-label {
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.8;
+  }
+  
+  #training-list .training-card-platform-value {
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  #training-list .training-card-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #training-list .training-card-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s;
+  }
+  
+  #training-list .training-card-button:hover,
+  #training-list .training-card-button:focus {
+    background-color: var(--secondary-color);
+    outline: none;
+  }
+  
+  #training-list .training-card-button:hover::before {
+    left: 100%;
+  }
+  
+  /* Adaptations responsives */
+  @media (max-width: 992px) {
+    #training-list {
+      padding: 3rem 1.25rem;
+    }
+    
+    #training-list .training-list-heading {
+      font-size: 2.2rem;
+    }
+    
+    #training-list .training-list-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #training-list {
+      padding: 2.5rem 1rem;
+    }
+    
+    #training-list .training-list-heading {
+      font-size: 2rem;
+    }
+    
+    #training-list .training-list-subheading {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    
+    #training-list .training-list-grid {
+      grid-template-columns: 1fr;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #training-list {
+      padding: 2rem 0.75rem;
+    }
+    
+    #training-list .training-list-heading {
+      font-size: 1.8rem;
+    }
+    
+    #training-list .training-list-subheading {
+      font-size: 1rem;
+    }
+    
+    #training-list .training-card-header {
+      padding: 1.25rem;
+    }
+    
+    #training-list .training-card-content {
+      padding: 1.25rem;
+    }
+    
+    #training-list .training-card-icon-wrapper {
+      width: 40px;
+      height: 40px;
+    }
+    
+    #training-list .training-card-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  /* Support pour montres connectées et très petits écrans */
+  @media (max-width: 320px) {
+    #training-list {
+      padding: 1.5rem 0.5rem;
+    }
+    
+    #training-list .training-list-heading {
+      font-size: 1.5rem;
+    }
+    
+    #training-list .training-list-subheading {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    #training-list .training-card-header {
+      padding: 1rem;
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    #training-list .training-card-content {
+      padding: 1rem;
+    }
+    
+    #training-list .training-card-title {
+      font-size: 1.1rem;
+    }
+    
+    #training-list .training-card-description {
+      font-size: 0.9rem;
+    }
+    
+    #training-list .training-card-button {
+      padding: 0.7rem 1rem;
+      font-size: 0.9rem;
+    }
+  }

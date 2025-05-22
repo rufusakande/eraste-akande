@@ -1,0 +1,217 @@
+/* AboutBio.css */
+#aboutBio {
+    background-color: #F5F7FA;
+    padding: 6rem 0;
+    position: relative;
+  }
+  
+  #aboutBio .about-bio__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  #aboutBio.visible .about-bio__container {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #aboutBio .about-bio__title {
+    font-size: 2.5rem;
+    color: #1E2A38;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    font-weight: 700;
+  }
+  
+  #aboutBio .about-bio__title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #E4B31A;
+    border-radius: 2px;
+  }
+  
+  #aboutBio .about-bio__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  #aboutBio .about-bio__text {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #aboutBio .about-bio__paragraph {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #4A4A4A;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  #aboutBio .about-bio__stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  #aboutBio .about-bio__stat-item {
+    display: flex;
+    align-items: flex-start;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  #aboutBio .about-bio__stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  #aboutBio .about-bio__stat-icon {
+    background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+  
+  #aboutBio .about-bio__stat-content {
+    flex: 1;
+  }
+  
+  #aboutBio .about-bio__stat-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1E2A38;
+    margin-bottom: 0.5rem;
+  }
+  
+  #aboutBio .about-bio__stat-text {
+    font-size: 1rem;
+    color: #4A4A4A;
+    line-height: 1.5;
+  }
+  
+  /* Responsive styles */
+  @media screen and (min-width: 768px) {
+    #aboutBio .about-bio__stats {
+      flex-direction: row;
+    }
+    
+    #aboutBio .about-bio__stat-item {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    #aboutBio {
+      padding: 5rem 0;
+    }
+    
+    #aboutBio .about-bio__title {
+      font-size: 2.25rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #aboutBio {
+      padding: 4rem 0;
+    }
+    
+    #aboutBio .about-bio__title {
+      font-size: 2rem;
+    }
+    
+    #aboutBio .about-bio__paragraph {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    
+    #aboutBio .about-bio__stats {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    #aboutBio .about-bio__stat-item {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #aboutBio {
+      padding: 3rem 0;
+    }
+    
+    #aboutBio .about-bio__title {
+      font-size: 1.75rem;
+    }
+    
+    #aboutBio .about-bio__stat-icon {
+      width: 50px;
+      height: 50px;
+    }
+    
+    #aboutBio .about-bio__stat-title {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    #aboutBio {
+      padding: 2.5rem 0;
+    }
+    
+    #aboutBio .about-bio__container {
+      padding: 0 1rem;
+    }
+    
+    #aboutBio .about-bio__title {
+      font-size: 1.5rem;
+    }
+    
+    #aboutBio .about-bio__paragraph {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    
+    #aboutBio .about-bio__stat-item {
+      padding: 1.25rem;
+    }
+    
+    #aboutBio .about-bio__stat-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 0.75rem;
+    }
+    
+    #aboutBio .about-bio__stat-title {
+      font-size: 1rem;
+    }
+    
+    #aboutBio .about-bio__stat-text {
+      font-size: 0.9rem;
+    }
+  }

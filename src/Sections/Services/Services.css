@@ -1,0 +1,232 @@
+/* Services.css */
+#services {
+    padding: 6rem 1.5rem;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  #services.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #services::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.05) 0%, rgba(0, 123, 255, 0) 70%);
+    z-index: 1;
+  }
+  
+  #services .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  #services .services-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  #services .services-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1E2A38;
+    margin-bottom: 1rem;
+  }
+  
+  #services .services-title-underline {
+    height: 4px;
+    width: 80px;
+    background: linear-gradient(90deg, #007BFF, #E4B31A);
+    margin: 0 auto;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+  
+  #services .services-subtitle {
+    font-size: 1.2rem;
+    color: #4A4A4A;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  #services .service-card {
+    background-color: #F5F7FA;
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(30, 42, 56, 0.05);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+  }
+  
+  #services .service-card.visible {
+    animation-name: fadeInUp;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #services .service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #007BFF, #E4B31A);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+    z-index: -1;
+  }
+  
+  #services .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(30, 42, 56, 0.1);
+  }
+  
+  #services .service-card:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  #services .service-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(228, 179, 26, 0.1);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  #services .service-card:hover .service-icon-container {
+    background-color: rgba(228, 179, 26, 0.2);
+    transform: scale(1.1);
+  }
+  
+  #services .service-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1E2A38;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  #services .service-description {
+    color: #4A4A4A;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  #services .service-cta {
+    display: inline-flex;
+    align-items: center;
+    color: #007BFF;
+    font-weight: 600;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  #services .service-cta:hover {
+    color: #E4B31A;
+  }
+  
+  #services .service-cta-arrow {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  #services .service-cta:hover .service-cta-arrow {
+    transform: translateX(5px);
+  }
+  
+  /* Responsive design */
+  @media screen and (max-width: 992px) {
+    #services .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #services {
+      padding: 4rem 1rem;
+    }
+    
+    #services .services-title {
+      font-size: 2rem;
+    }
+    
+    #services .services-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #services .services-title {
+      font-size: 1.8rem;
+    }
+    
+    #services .service-card {
+      padding: 1.8rem;
+    }
+  }
+  
+  /* Support pour les montres connectées et très petits écrans */
+  @media screen and (max-width: 280px) {
+    #services {
+      padding: 3rem 0.8rem;
+    }
+    
+    #services .services-title {
+      font-size: 1.5rem;
+    }
+    
+    #services .service-card {
+      padding: 1.5rem;
+    }
+    
+    #services .service-title {
+      font-size: 1.2rem;
+    }
+  }

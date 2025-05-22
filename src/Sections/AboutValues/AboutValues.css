@@ -1,0 +1,242 @@
+/* AboutValues.css */
+#aboutValues {
+    background-color: #F5F7FA;
+    padding: 6rem 0;
+    position: relative;
+  }
+  
+  #aboutValues .about-values__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  #aboutValues.visible .about-values__container {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #aboutValues .about-values__title {
+    font-size: 2.5rem;
+    color: #1E2A38;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    font-weight: 700;
+  }
+  
+  #aboutValues .about-values__subtitle {
+    font-size: 1.25rem;
+    color: #4A4A4A;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #aboutValues .about-values__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  #aboutValues .about-values__card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  #aboutValues .about-values__card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #aboutValues .about-values__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  #aboutValues .about-values__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #007BFF;
+    border-radius: 12px 0 0 12px;
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+  
+  #aboutValues .about-values__card:hover::before {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1) 0%, rgba(0, 123, 255, 0) 100%);
+    border-radius: 12px;
+  }
+  
+  #aboutValues .about-values__card-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.25);
+  }
+  
+  #aboutValues .about-values__card-icon::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 123, 255, 0.2);
+    z-index: -1;
+    animation: pulse 3s infinite ease-in-out;
+  }
+  
+  #aboutValues .about-values__card-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #1E2A38;
+    margin-bottom: 1rem;
+  }
+  
+  #aboutValues .about-values__card-text {
+    font-size: 1rem;
+    color: #4A4A4A;
+    line-height: 1.6;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 992px) {
+    #aboutValues {
+      padding: 5rem 0;
+    }
+    
+    #aboutValues .about-values__title {
+      font-size: 2.25rem;
+    }
+    
+    #aboutValues .about-values__subtitle {
+      font-size: 1.15rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #aboutValues {
+      padding: 4rem 0;
+    }
+    
+    #aboutValues .about-values__title {
+      font-size: 2rem;
+    }
+    
+    #aboutValues .about-values__subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    
+    #aboutValues .about-values__grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #aboutValues {
+      padding: 3rem 0;
+    }
+    
+    #aboutValues .about-values__title {
+      font-size: 1.75rem;
+    }
+    
+    #aboutValues .about-values__subtitle {
+      font-size: 1rem;
+    }
+    
+    #aboutValues .about-values__card {
+      padding: 1.5rem;
+    }
+    
+    #aboutValues .about-values__card-icon {
+      width: 60px;
+      height: 60px;
+    }
+    
+    #aboutValues .about-values__card-title {
+      font-size: 1.25rem;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    #aboutValues {
+      padding: 2.5rem 0;
+    }
+    
+    #aboutValues .about-values__container {
+      padding: 0 1rem;
+    }
+    
+    #aboutValues .about-values__title {
+      font-size: 1.5rem;
+    }
+    
+    #aboutValues .about-values__subtitle {
+      font-size: 0.95rem;
+    }
+    
+    #aboutValues .about-values__card {
+      padding: 1.25rem;
+    }
+    
+    #aboutValues .about-values__card-icon {
+      width: 50px;
+      height: 50px;
+    }
+    
+    #aboutValues .about-values__card-title {
+      font-size: 1.15rem;
+    }
+    
+    #aboutValues .about-values__card-text {
+      font-size: 0.95rem;
+    }
+  }

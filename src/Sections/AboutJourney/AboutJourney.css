@@ -1,0 +1,285 @@
+/* AboutJourney.css */
+#aboutJourney {
+    background-color: #fff;
+    padding: 6rem 0;
+    position: relative;
+  }
+  
+  #aboutJourney .about-journey__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  #aboutJourney.visible .about-journey__container {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #aboutJourney .about-journey__title {
+    font-size: 2.5rem;
+    color: #1E2A38;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    font-weight: 700;
+  }
+  
+  #aboutJourney .about-journey__title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #E4B31A;
+    border-radius: 2px;
+  }
+  
+  #aboutJourney .about-journey__timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  #aboutJourney .about-journey__timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 123, 255, 0.3), rgba(0, 123, 255, 0.6), rgba(0, 123, 255, 0.3));
+    border-radius: 2px;
+  }
+  
+  #aboutJourney .about-journey__timeline-item {
+    position: relative;
+    padding: 0 0 3rem 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  #aboutJourney .about-journey__timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #aboutJourney .about-journey__timeline-item:last-child {
+    padding-bottom: 0;
+  }
+  
+  #aboutJourney .about-journey__timeline-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: #007BFF;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 1;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2);
+  }
+  
+  #aboutJourney .about-journey__timeline-content {
+    position: relative;
+    width: calc(50% - 40px);
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #aboutJourney .about-journey__timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  #aboutJourney .about-journey__timeline-item:nth-child(odd) .about-journey__timeline-content {
+    left: calc(50% + 40px);
+  }
+  
+  #aboutJourney .about-journey__timeline-item:nth-child(even) .about-journey__timeline-content {
+    left: 0;
+    text-align: right;
+  }
+  
+  #aboutJourney .about-journey__timeline-item:nth-child(odd) .about-journey__timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+  }
+  
+  #aboutJourney .about-journey__timeline-item:nth-child(even) .about-journey__timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+  }
+  
+  #aboutJourney .about-journey__timeline-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1E2A38;
+    margin-bottom: 0.5rem;
+  }
+  
+  #aboutJourney .about-journey__timeline-date {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #007BFF;
+    margin-bottom: 1rem;
+  }
+  
+  #aboutJourney .about-journey__timeline-description {
+    font-size: 1rem;
+    color: #4A4A4A;
+    line-height: 1.6;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 992px) {
+    #aboutJourney {
+      padding: 5rem 0;
+    }
+    
+    #aboutJourney .about-journey__title {
+      font-size: 2.25rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #aboutJourney {
+      padding: 4rem 0;
+    }
+    
+    #aboutJourney .about-journey__title {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    #aboutJourney .about-journey__timeline::before {
+      left: 30px;
+    }
+    
+    #aboutJourney .about-journey__timeline-icon {
+      left: 30px;
+      width: 40px;
+      height: 40px;
+    }
+    
+    #aboutJourney .about-journey__timeline-item:nth-child(odd) .about-journey__timeline-content,
+    #aboutJourney .about-journey__timeline-item:nth-child(even) .about-journey__timeline-content {
+      width: calc(100% - 80px);
+      left: 80px;
+      text-align: left;
+    }
+    
+    #aboutJourney .about-journey__timeline-item:nth-child(odd) .about-journey__timeline-content::before,
+    #aboutJourney .about-journey__timeline-item:nth-child(even) .about-journey__timeline-content::before {
+      left: -15px;
+      right: auto;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 15px solid #fff;
+      border-left: none;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #aboutJourney {
+      padding: 3rem 0;
+    }
+    
+    #aboutJourney .about-journey__title {
+      font-size: 1.75rem;
+    }
+    
+    #aboutJourney .about-journey__timeline-item {
+      padding-bottom: 2rem;
+    }
+    
+    #aboutJourney .about-journey__timeline-content {
+      padding: 1.25rem;
+    }
+    
+    #aboutJourney .about-journey__timeline-title {
+      font-size: 1.1rem;
+    }
+    
+    #aboutJourney .about-journey__timeline-description {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    #aboutJourney {
+      padding: 2.5rem 0;
+    }
+    
+    #aboutJourney .about-journey__container {
+      padding: 0 1rem;
+    }
+    
+    #aboutJourney .about-journey__title {
+      font-size: 1.5rem;
+    }
+    
+    #aboutJourney .about-journey__timeline::before {
+      left: 20px;
+    }
+    
+    #aboutJourney .about-journey__timeline-icon {
+      left: 20px;
+      width: 35px;
+      height: 35px;
+    }
+    
+    #aboutJourney .about-journey__timeline-item:nth-child(odd) .about-journey__timeline-content,
+    #aboutJourney .about-journey__timeline-item:nth-child(even) .about-journey__timeline-content {
+      width: calc(100% - 60px);
+      left: 60px;
+    }
+    
+    #aboutJourney .about-journey__timeline-content {
+      padding: 1rem;
+    }
+    
+    #aboutJourney .about-journey__timeline-title {
+      font-size: 1rem;
+    }
+    
+    #aboutJourney .about-journey__timeline-date {
+      font-size: 0.85rem;
+    }
+    
+    #aboutJourney .about-journey__timeline-description {
+      font-size: 0.9rem;
+    }
+  }

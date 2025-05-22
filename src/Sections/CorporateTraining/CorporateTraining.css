@@ -1,0 +1,228 @@
+/* CorporateTraining.css */
+#corporate-training {
+    padding: 5rem 1rem;
+    background-color: #fff;
+  }
+  
+  #corporate-training .corporate-training__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  #corporate-training .corporate-training__content {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  #corporate-training .corporate-training__content.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  #corporate-training .corporate-training__title {
+    font-size: 2.5rem;
+    color: #1E2A38;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+  }
+  
+  #corporate-training .corporate-training__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #E4B31A;
+    border-radius: 2px;
+  }
+  
+  #corporate-training .corporate-training__description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #4A4A4A;
+    margin-bottom: 2rem;
+  }
+  
+  #corporate-training .corporate-training__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  #corporate-training .corporate-training__feature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  #corporate-training .corporate-training__feature-icon {
+    color: #007BFF;
+    flex-shrink: 0;
+  }
+  
+  #corporate-training .corporate-training__feature-text {
+    font-size: 1rem;
+    color: #4A4A4A;
+  }
+  
+  #corporate-training .corporate-training__topics {
+    margin-bottom: 2rem;
+  }
+  
+  #corporate-training .corporate-training__topics-title {
+    font-size: 1.25rem;
+    color: #1E2A38;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  #corporate-training .corporate-training__topics-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  #corporate-training .corporate-training__topic {
+    background-color: #F5F7FA;
+    color: #1E2A38;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  #corporate-training .corporate-training__topic:hover {
+    background-color: #E4B31A;
+    color: #1E2A38;
+  }
+  
+  #corporate-training .corporate-training__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1E2A38;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(30, 42, 56, 0.25);
+  }
+  
+  #corporate-training .corporate-training__cta:hover,
+  #corporate-training .corporate-training__cta:focus {
+    background-color: #283b52;
+    box-shadow: 0 6px 10px rgba(30, 42, 56, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  #corporate-training .corporate-training__image-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(30, 42, 56, 0.15);
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition-delay: 0.2s;
+  }
+  
+  #corporate-training .corporate-training__image-container.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  #corporate-training .corporate-training__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
+  #corporate-training .corporate-training__image-container:hover .corporate-training__image {
+    transform: scale(1.03);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    #corporate-training .corporate-training__title {
+      font-size: 2.25rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #corporate-training .corporate-training__container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    
+    #corporate-training .corporate-training__title {
+      font-size: 2rem;
+    }
+    
+    #corporate-training .corporate-training__description {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #corporate-training {
+      padding: 3rem 1rem;
+    }
+    
+    #corporate-training .corporate-training__title {
+      font-size: 1.75rem;
+    }
+    
+    #corporate-training .corporate-training__features {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Support for small screens like watches */
+  @media (max-width: 320px) {
+    #corporate-training {
+      padding: 2rem 0.75rem;
+    }
+    
+    #corporate-training .corporate-training__title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    #corporate-training .corporate-training__description {
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    #corporate-training .corporate-training__feature-text {
+      font-size: 0.875rem;
+    }
+    
+    #corporate-training .corporate-training__topics-title {
+      font-size: 1.125rem;
+    }
+    
+    #corporate-training .corporate-training__topic {
+      font-size: 0.75rem;
+      padding: 0.375rem 0.75rem;
+    }
+    
+    #corporate-training .corporate-training__cta {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
