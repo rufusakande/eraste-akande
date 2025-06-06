@@ -9,27 +9,34 @@ function TrainingList() {
   const trainings = [
     {
       id: 1,
+      title: "Analyse des KPI de la qualité des services des réseaux télécoms 2G/3G/4G",
+      description: "Optimisez vos réseaux télécoms avec des dashboards dynamiques. Grâce à la collecte automatisée des fichiers OMC-R et à l'analyse visuelle via la suite ELK (Elasticsearch, Logstash, Kibana), nous vous aidons à surveiller efficacement la qualité de vos réseaux mobiles.",
+      icon: <Book className="training-card-icon" aria-hidden="true" />,
+      platform: "Udemy & Sessions personnalisées"
+    },
+    {
+      id: 2,
       title: "Maîtriser Elasticsearch – De l'initiation à la certification Elastic Engineer",
       description: "Formez-vous pas à pas jusqu'à la certification officielle. Disponible sur Udemy ou en sessions personnalisées, cette formation vous accompagne de la découverte à la maîtrise avancée d'Elasticsearch, en vue de la certification.",
       icon: <Book className="training-card-icon" aria-hidden="true" />,
       platform: "Udemy & Sessions personnalisées"
     },
     {
-      id: 2,
+      id: 3,
       title: "Monitoring & Observabilité avec la stack ELK",
       description: "Apprenez à surveiller vos systèmes efficacement. Une formation pratique sur la configuration des Beats, la gestion des logs, l'analyse des métriques, et la création de dashboards dans Kibana.",
       icon: <Activity className="training-card-icon" aria-hidden="true" />,
       platform: "Sessions personnalisées"
     },
     {
-      id: 3,
+      id: 4,
       title: "Collecte & traitement des données avec ELK",
       description: "Automatisez le traitement de vos données. Formation axée sur Logstash et les pipelines d'ingestion, pour traiter et enrichir vos données avant indexation dans Elasticsearch.",
       icon: <Database className="training-card-icon" aria-hidden="true" />,
       platform: "Sessions personnalisées"
     },
     {
-      id: 4,
+      id: 5,
       title: "Comprendre les Données Télécoms",
       description: "Du fonctionnement des réseaux mobiles à l'analyse de leurs données. Un parcours unique combinant théorie des télécoms (2G/3G/4G), formats de données réseau, et cas pratiques de traitement avec ELK.",
       icon: <Radio className="training-card-icon" aria-hidden="true" />,
