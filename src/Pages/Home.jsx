@@ -9,8 +9,14 @@ import Hero from "../Sections/Hero/Hero";
 import PointsForts from "../Sections/PointsForts/PointsForts";
 import Services from "../Sections/Services/Services";
 import Temoignages from "../Sections/Temoignages/Temoignages";
+import { useEffect } from "react";
 
 function Home () {
+
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    }, [])
+
     return (
         <>
             <Header/>

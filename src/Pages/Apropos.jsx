@@ -7,8 +7,14 @@ import AboutHero from "../Sections/AboutHero/AboutHero";
 import AboutJourney from "../Sections/AboutJourney/AboutJourney";
 import AboutRecognition from "../Sections/AboutRecognition/AboutRecognition";
 import AboutValues from "../Sections/AboutValues/AboutValues";
+import { useEffect } from "react";
 
 function Apropos () {
+
+    useEffect(()=>{
+            window.scrollTo(0, 0);
+        }, [])
+
     return (
         <>
             <Header/>

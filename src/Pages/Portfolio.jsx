@@ -8,8 +8,14 @@ import PortfolioCTA from "../Sections/PortfolioCTA/PortfolioCTA";
 import PortfolioProjects from "../Sections/PortfolioProjects/PortfolioProjects";
 import ProfileLinks from "../Sections/ProfileLinks/ProfileLinks";
 import StatisticsImpact from "../Sections/StatisticsImpact/StatisticsImpact";
+import { useEffect } from "react";
 
 function Portfolio () {
+
+    useEffect(()=>{
+            window.scrollTo(0, 0);
+        }, [])
+
     return (
         <>
             <Header/>

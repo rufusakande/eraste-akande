@@ -6,8 +6,14 @@ import TrainingCTA from "../Sections/TrainingCTA/TrainingCTA";
 import TrainingHero from "../Sections/TrainingHero/TrainingHero";
 import TrainingList from "../Sections/TrainingList/TrainingList";
 import UdemyCourse from "../Sections/UdemyCourse/UdemyCourse";
+import { useEffect } from "react";
 
 function Training () {
+
+    useEffect(()=>{
+            window.scrollTo(0, 0);
+        }, [])
+
     return (
         <>
             <Header/>
