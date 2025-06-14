@@ -1,5 +1,6 @@
 // Header.jsx
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, Search, ChevronDown } from 'lucide-react';
 import './Header.css';
 
@@ -75,13 +76,13 @@ const Header = () => {
                     <ul className={`dropdown-menu ${activeDropdown === index ? 'show' : ''}`}>
                       {item.dropdown.map((dropItem, dropIndex) => (
                         <li key={dropIndex} className="dropdown-item">
-                          <a style={{color:'black'}} href={dropItem.link}>{dropItem.title}</a>
+                          <Link style={{color:'black'}} to={dropItem.link}>{dropItem.title}</Link>
                         </li>
                       ))}
                     </ul>
                   </>
                 ) : (
-                  <a href={item.link}>{item.title}</a>
+                  <Link to={item.link}>{item.title}</Link>
                 )}
               </li>
             ))}
@@ -130,13 +131,13 @@ const Header = () => {
                   <ul className={`mobile-dropdown-menu ${activeDropdown === index ? 'show' : ''}`}>
                     {item.dropdown.map((dropItem, dropIndex) => (
                       <li key={dropIndex} className="mobile-dropdown-item">
-                        <a href={dropItem.link}>{dropItem.title}</a>
+                        <Link to={dropItem.link}>{dropItem.title}</Link>
                       </li>
                     ))}
                   </ul>
                 </>
               ) : (
-                <a href={item.link}>{item.title}</a>
+                <Link to={item.link}>{item.title}</Link>
               )}
             </li>
           ))}

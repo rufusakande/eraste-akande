@@ -1,3 +1,4 @@
+import { TranslationProvider, TranslatedText, LanguageSelector } from "../Components/AutoTranslate/AutoTranslate";
 import Footer from "../Components/Footer/Footer";
 import Header from "../Components/Header/Header";
 import AboutExpertiseTelecom from "../Sections/AboutExpertiseTelecom/AboutExpertiseTelecom";
