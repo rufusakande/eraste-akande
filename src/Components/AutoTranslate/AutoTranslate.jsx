@@ -1,4 +1,5 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';
+// AutoTranslate.js - Système de traduction automatique
+import React, { useState, useEffect, createContext, useContext, useRef } from 'react';
 
 // Context pour la traduction
 const TranslationContext = createContext();
@@ -12,75 +13,41 @@ export const useTranslation = () => {
   return context;
 };
 
-// Cache des traductions pour éviter les appels répétés
-const translationCache = new Map();
-
-// Fonction de traduction avec API gratuite
-const translateText = async (text, sourceLang = 'fr', targetLang = 'en') => {
-  const cacheKey = `${text}-${sourceLang}-${targetLang}`;
-  
-  if (translationCache.has(cacheKey)) {
-    return translationCache.get(cacheKey);
-  }
-
-  try {
-    // Utilisation de l'API MyMemory (gratuite, 1000 requêtes/jour)
-    const response = await fetch(
-      `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${sourceLang}|${targetLang}`
-    );
-    const data = await response.json();
+// Dictionnaire de traductions statiques (plus rapide et fiable)
+const translations = {
+  'fr-en': {
     
-    if (data.responseStatus === 200) {
-      const translation = data.responseData.translation;
-      translationCache.set(cacheKey, translation);
-      return translation;
-    }
-  } catch (error) {
-    console.warn('Erreur de traduction:', error);
+    "Iyanou Eraste AKANDE": "Iyanou Eraste AKANDE",
+
   }
-  
-  return text; // Retourne le texte original en cas d'erreur
 };
 
 // Provider de traduction
 export const TranslationProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en'); // Anglais par défaut
-  const [translations, setTranslations] = useState(new Map());
+  // Langue par défaut : anglais (selon votre demande)
+  const [language, setLanguage] = useState('en');
   const [isLoading, setIsLoading] = useState(false);
 
-  // Détection de la langue du navigateur (optionnel)
   useEffect(() => {
-    const browserLang = navigator.language.slice(0, 2);
-    const savedLang = localStorage.getItem('preferred-language');
-    
-    // Si pas de langue sauvegardée, utiliser anglais par défaut
-    const defaultLang = savedLang || 'en';
-    setLanguage(defaultLang);
+    // Récupérer la langue sauvegardée ou utiliser anglais par défaut
+    const savedLang = localStorage.getItem('preferred-language') || 'en';
+    setLanguage(savedLang);
   }, []);
 
   const changeLanguage = (newLang) => {
     setLanguage(newLang);
     localStorage.setItem('preferred-language', newLang);
+    // Recharger la page pour appliquer les traductions
+    window.location.reload();
   };
 
-  const t = async (text) => {
+  const t = (text) => {
     if (language === 'fr') {
       return text; // Texte original en français
     }
 
-    const cacheKey = `${text}-${language}`;
-    
-    if (translations.has(cacheKey)) {
-      return translations.get(cacheKey);
-    }
-
-    setIsLoading(true);
-    const translated = await translateText(text, 'fr', language);
-    
-    setTranslations(prev => new Map(prev).set(cacheKey, translated));
-    setIsLoading(false);
-    
-    return translated;
+    const langTranslations = translations[`fr-${language}`];
+    return langTranslations?.[text] || text;
   };
 
   return (
@@ -95,25 +62,95 @@ export const TranslationProvider = ({ children }) => {
   );
 };
 
-// Composant de texte traduit
-export const TranslatedText = ({ children, tag: Tag = 'span' }) => {
-  const { t } = useTranslation();
-  const [translatedText, setTranslatedText] = useState(children);
+// Composant AutoTranslate - traduit automatiquement tous les textes
+export const AutoTranslate = ({ children }) => {
+  const { t, language } = useTranslation();
+  const containerRef = useRef(null);
+  const [isTranslated, setIsTranslated] = useState(false);
 
   useEffect(() => {
-    const translateAsync = async () => {
-      const result = await t(children);
-      setTranslatedText(result);
-    };
-    translateAsync();
-  }, [children, t]);
+    const translateTextNodes = (element) => {
+      if (!element || language === 'fr' || isTranslated) return;
 
-  return <Tag>{translatedText}</Tag>;
+      // Parcourir tous les nœuds de texte
+      const walker = document.createTreeWalker(
+        element,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: (node) => {
+            // Ignorer les scripts, styles et nœuds vides
+            const parent = node.parentElement;
+            if (parent && (parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE')) {
+              return NodeFilter.FILTER_REJECT;
+            }
+            return node.textContent.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+          }
+        },
+        false
+      );
+
+      const textNodes = [];
+      let node;
+      while (node = walker.nextNode()) {
+        textNodes.push(node);
+      }
+
+      // Traduire chaque nœud de texte
+      textNodes.forEach(textNode => {
+        const originalText = textNode.textContent.trim();
+        if (originalText) {
+          const translatedText = t(originalText);
+          if (translatedText !== originalText) {
+            textNode.textContent = translatedText;
+          }
+        }
+      });
+
+      // Traduire les attributs (title, alt, placeholder, aria-label)
+      const elements = element.querySelectorAll('*');
+      elements.forEach(el => {
+        ['title', 'alt', 'placeholder', 'aria-label'].forEach(attr => {
+          const value = el.getAttribute(attr);
+          if (value && value.trim()) {
+            const translatedValue = t(value.trim());
+            if (translatedValue !== value) {
+              el.setAttribute(attr, translatedValue);
+            }
+          }
+        });
+      });
+
+      setIsTranslated(true);
+    };
+
+    if (containerRef.current) {
+      // Attendre que le DOM soit complètement rendu
+      const timer = setTimeout(() => {
+        translateTextNodes(containerRef.current);
+      }, 100);
+
+      return () => clearTimeout(timer);
+    }
+  }, [t, language, children, isTranslated]);
+
+  // Réinitialiser la traduction quand les children changent
+  useEffect(() => {
+    setIsTranslated(false);
+  }, [children]);
+
+  return <div ref={containerRef}>{children}</div>;
 };
 
-// Sélecteur de langue
+// Sélecteur de langue amélioré
 export const LanguageSelector = () => {
   const { language, changeLanguage } = useTranslation();
+
+  const languages = [
+    { code: 'en', label: '🇺🇸 English', name: 'English' },
+    { code: 'fr', label: '🇫🇷 Français', name: 'Français' },
+    { code: 'es', label: '🇪🇸 Español', name: 'Español' },
+    { code: 'de', label: '🇩🇪 Deutsch', name: 'Deutsch' }
+  ];
 
   return (
     <div style={{ 
@@ -121,26 +158,88 @@ export const LanguageSelector = () => {
       top: '20px', 
       right: '20px', 
       zIndex: 1000,
-      background: 'white',
-      padding: '10px',
+      background: 'rgba(255, 255, 255, 0.95)',
+      padding: '8px 12px',
       borderRadius: '8px',
-      boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+      boxShadow: '0 2px 12px rgba(0,0,0,0.15)',
+      backdropFilter: 'blur(10px)'
     }}>
       <select 
         value={language} 
         onChange={(e) => changeLanguage(e.target.value)}
         style={{
-          padding: '5px 10px',
-          border: '1px solid #ccc',
-          borderRadius: '4px',
-          fontSize: '14px'
+          padding: '6px 10px',
+          border: '1px solid #ddd',
+          borderRadius: '6px',
+          fontSize: '14px',
+          backgroundColor: 'transparent',
+          cursor: 'pointer',
+          outline: 'none'
         }}
+        title="Changer de langue"
       >
-        <option value="en">🇺🇸 English</option>
-        <option value="fr">🇫🇷 Français</option>
-        <option value="es">🇪🇸 Español</option>
-        <option value="de">🇩🇪 Deutsch</option>
+        {languages.map(lang => (
+          <option key={lang.code} value={lang.code}>
+            {lang.label}
+          </option>
+        ))}
       </select>
     </div>
   );
+};
+
+// Script pour extraire automatiquement les textes
+export const extractTextsForTranslation = () => {
+  const texts = new Set();
+  
+  // Extraire tous les textes visibles
+  document.querySelectorAll('*').forEach(el => {
+    // Texte direct des éléments (sans les enfants)
+    const directText = Array.from(el.childNodes)
+      .filter(node => node.nodeType === 3) // Text nodes only
+      .map(node => node.textContent.trim())
+      .join(' ')
+      .trim();
+    
+    if (directText && directText.length > 1 && directText.length < 200) {
+      texts.add(directText);
+    }
+    
+    // Attributs à traduire
+    ['title', 'alt', 'placeholder', 'aria-label'].forEach(attr => {
+      const val = el.getAttribute(attr);
+      if (val && val.trim() && val.trim().length > 1) {
+        texts.add(val.trim());
+      }
+    });
+  });
+  
+  // Filtrer les textes non pertinents
+  const filteredTexts = [...texts].filter(text => {
+    return !text.match(/^[\d\s\-_.,;:()[\]{}'"]*$/) && // Pas que de la ponctuation/chiffres
+           !text.match(/^[A-Z_][A-Z0-9_]*$/) && // Pas des constantes
+           !text.includes('http') && // Pas des URLs
+           text.length >= 2;
+  });
+  
+  // Générer le code JavaScript
+  const jsObject = filteredTexts.sort().reduce((obj, text) => {
+    obj[text] = `[TRADUIRE] ${text}`;
+    return obj;
+  }, {});
+  
+  console.log('=== TEXTES À TRADUIRE ===');
+  console.log('Copiez ce code dans votre fichier de traductions :');
+  console.log(JSON.stringify(jsObject, null, 2));
+  
+  return jsObject;
+};
+
+console.log("Texte traduit : ",extractTextsForTranslation())
+
+// Composant utilitaire pour texte traduit (optionnel)
+export const TranslatedText = ({ children, tag: Tag = 'span' }) => {
+  const { t } = useTranslation();
+  const translatedText = t(children);
+  return <Tag>{translatedText}</Tag>;
 };
