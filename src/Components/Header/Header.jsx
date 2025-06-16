@@ -1,6 +1,6 @@
-// Header.jsx - Version modifiée avec AutoTranslate
+// Header.jsx - Version corrigée
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Search, ChevronDown } from 'lucide-react';
 import './Header.css';
 
@@ -8,6 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,9 +19,25 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Effet pour fermer le menu et restaurer le scroll lors du changement de route
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+    document.body.style.overflow = 'auto'; // Restaurer le scroll
+  }, [location.pathname]);
+
+  // Effet pour nettoyer le style overflow au démontage du composant
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    if (!isMenuOpen) {
+    const newMenuState = !isMenuOpen;
+    setIsMenuOpen(newMenuState);
+    
+    if (newMenuState) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
@@ -29,6 +46,13 @@ const Header = () => {
 
   const toggleDropdown = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
+  // Nouvelle fonction pour gérer les clics sur les liens
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+    document.body.style.overflow = 'auto';
   };
 
   const navItems = [
@@ -76,13 +100,19 @@ const Header = () => {
                       <ul className={`dropdown-menu ${activeDropdown === index ? 'show' : ''}`}>
                         {item.dropdown.map((dropItem, dropIndex) => (
                           <li key={dropIndex} className="dropdown-item">
-                            <Link style={{color:'black'}} to={dropItem.link}>{dropItem.title}</Link>
+                            <Link 
+                              style={{color:'black'}} 
+                              to={dropItem.link}
+                              onClick={handleLinkClick}
+                            >
+                              {dropItem.title}
+                            </Link>
                           </li>
                         ))}
                       </ul>
                     </>
                   ) : (
-                    <Link to={item.link}>{item.title}</Link>
+                    <Link to={item.link} onClick={handleLinkClick}>{item.title}</Link>
                   )}
                 </li>
               ))}
@@ -131,13 +161,15 @@ const Header = () => {
                     <ul className={`mobile-dropdown-menu ${activeDropdown === index ? 'show' : ''}`}>
                       {item.dropdown.map((dropItem, dropIndex) => (
                         <li key={dropIndex} className="mobile-dropdown-item">
-                          <Link to={dropItem.link}>{dropItem.title}</Link>
+                          <Link to={dropItem.link} onClick={handleLinkClick}>
+                            {dropItem.title}
+                          </Link>
                         </li>
                       ))}
                     </ul>
                   </>
                 ) : (
-                  <Link to={item.link}>{item.title}</Link>
+                  <Link to={item.link} onClick={handleLinkClick}>{item.title}</Link>
                 )}
               </li>
             ))}
