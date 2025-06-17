@@ -20,14 +20,14 @@ const ContactHome = () => {
     {
       title: "LinkedIn",
       icon: <Linkedin size={24} />,
-      description: "Consultez mon profil professionnel et mon réseau",
+      description: "View my professional profile and network",
       url: "https://www.linkedin.com/in/iyanou-eraste-akande",
       color: "#0077B5",
     },
     {
       title: "Upwork",
       icon: <Globe size={24} />,
-      description: "Découvrez mes prestations et avis clients",
+      description: "Discover my services and client reviews",
       url: "https://www.upwork.com/freelancers/~018b666e20302c5287",
       color: "#6FDA44",
     },
@@ -39,9 +39,9 @@ const ContactHome = () => {
       color: "#FEC514",
     }/* ,
     {
-      title: "Formation Udemy",
+      title: "Udemy Training",
       icon: <BarChart size={24} />,
-      description: "Maîtriser Elasticsearch : De l'Initiation à la Certification",
+      description: "Master Elasticsearch: From Beginner to Certification",
       url: "https://www.udemy.com/course/maitriser-elasticsearch/?couponCode=ST7MT290425G1",
       color: "#EA5252",
     } */
@@ -93,13 +93,13 @@ const ContactHome = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simuler un envoi d'API
+    // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       setFormSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
       
-      // Réinitialiser le message de succès après 5 secondes
+      // Reset success message after 5 seconds
       setTimeout(() => {
         setFormSubmitted(false);
       }, 5000);
@@ -110,14 +110,14 @@ const ContactHome = () => {
     <section id="contactHome" ref={sectionRef} className="contact-home-section">
       <div className="contact-home-container">
         <div className="contact-home-header">
-          <h2 className="contact-home-title">Un projet en tête ?</h2>
+          <h2 className="contact-home-title">Have a project in mind?</h2>
           <div className="contact-home-title-underline"></div>
           <p className="contact-home-subtitle">
-            Contactez-moi pour discuter de vos besoins en data et Elasticsearch
+            Contact me to discuss your data and Elasticsearch needs
           </p>
         </div>
 
-        {/* Section pour les liens de profil */}
+        {/* Section for profile links */}
         <div className="profile-links-section" ref={profileLinksRef}>
           <div className="profile-links-container">
             {profileLinks.map((link, index) => (
@@ -171,12 +171,12 @@ const ContactHome = () => {
                   <circle cx="12" cy="12" r="10" fill="#007BFF" />
                   <path d="M8 12l3 3 5-6" stroke="white" strokeWidth="2" fill="none" />
                 </svg>
-                <p>Message envoyé avec succès ! Je vous recontacterai dès que possible.</p>
+                <p>Message sent successfully! I will get back to you as soon as possible.</p>
               </div>
             ) : (
               <>
                 <div className="contact-home-form-group">
-                  <label htmlFor="name" className="contact-home-form-label">Nom</label>
+                  <label htmlFor="name" className="contact-home-form-label">Name</label>
                   <input 
                     type="text" 
                     id="name" 
@@ -184,7 +184,7 @@ const ContactHome = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="contact-home-form-input" 
-                    placeholder="Votre nom" 
+                    placeholder="Your name" 
                     required 
                   />
                 </div>
@@ -198,7 +198,7 @@ const ContactHome = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="contact-home-form-input" 
-                    placeholder="Votre email" 
+                    placeholder="Your email" 
                     required 
                   />
                 </div>
@@ -211,7 +211,7 @@ const ContactHome = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="contact-home-form-textarea" 
-                    placeholder="Comment puis-je vous aider ?" 
+                    placeholder="How can I help you?" 
                     required
                   ></textarea>
                 </div>
@@ -223,12 +223,12 @@ const ContactHome = () => {
                 >
                   {isSubmitting ? (
                     <>
-                      <span className="contact-home-form-submit-text">Envoi en cours...</span>
+                      <span className="contact-home-form-submit-text">Sending...</span>
                       <div className="contact-home-form-submit-loader"></div>
                     </>
                   ) : (
                     <>
-                      <span className="contact-home-form-submit-text">Envoyer ma demande</span>
+                      <span className="contact-home-form-submit-text">Send my request</span>
                       <Send size={18} className="contact-home-form-submit-icon" />
                     </>
                   )}

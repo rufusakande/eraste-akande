@@ -15,14 +15,14 @@ const TechStack = () => {
     { name: 'Python', category: 'Programming' },
     { name: 'Spark', category: 'Data Processing' },
     { name: 'Flink', category: 'Data Processing' },
-    // ✅ Ajout des compétences Télécoms
-    { name: 'Réseaux 4G/LTE', category: 'Telecommunications' },
-    { name: 'Réseaux 3G/UMTS', category: 'Telecommunications' },
-    { name: 'Réseaux 2G/GSM', category: 'Telecommunications' },
-    { name: 'KPI Télécoms', category: 'Telecom Performance' },
+    // ✅ Addition of Telecom skills
+    { name: '4G/LTE Networks', category: 'Telecommunications' },
+    { name: '3G/UMTS Networks', category: 'Telecommunications' },
+    { name: '2G/GSM Networks', category: 'Telecommunications' },
+    { name: 'Telecom KPIs', category: 'Telecom Performance' },
     { name: 'QoS Monitoring', category: 'Network Monitoring' },
     { name: 'Network Architecture', category: 'Network Design' },
-    { name: 'Analyse de données télécom', category: 'Data Analysis' },
+    { name: 'Telecom Data Analysis', category: 'Data Analysis' },
   ];
 
   useEffect(() => {
@@ -65,11 +65,11 @@ const TechStack = () => {
     >
       <div className="tech-stack__container">
         <h2 id="tech-stack-heading" className="tech-stack__title">
-          Stack de compétences
+          Skills stack
         </h2>
         <p className="tech-stack__description">
-          Mon expertise technique couvre un large éventail de technologies modernes pour le traitement, 
-          l'analyse et la visualisation des données.
+          My technical expertise covers a wide range of modern technologies for processing, 
+          analyzing, and visualizing data.
         </p>
         
         <div className="tech-stack__grid">

@@ -52,11 +52,11 @@ function SolutionsPage () {
       {/* Hero Section */}
       <section ref={heroRef} className="solutions-hero" aria-labelledby="solutions-heading">
         <div className="solutions-container">
-          <h1 id="solutions-heading">Solutions Personnalisées pour vos Données</h1>
-          <p>Transformez vos données en leviers stratégiques avec des solutions sur mesure conçues par un expert Elasticsearch certifié.</p>
+          <h1 id="solutions-heading">Custom Solutions for Your Data</h1>
+          <p>Transform your data into strategic levers with tailor-made solutions designed by a certified Elasticsearch expert.</p>
           <div className="solutions-cta">
-            <a href="/contact" className="solutions-primary-btn" aria-label="Discuter de votre projet">
-              Discuter de votre projet <ArrowRight size={18} />
+            <a href="/contact" className="solutions-primary-btn" aria-label="Discuss your project">
+              Discuss your project <ArrowRight size={18} />
             </a>
           </div>
         </div>
@@ -65,20 +65,20 @@ function SolutionsPage () {
       {/* Main Solutions */}
       <section ref={solutionsRef} className="solutions-main" aria-labelledby="main-solutions-heading">
         <div className="solutions-container">
-          <h2 id="main-solutions-heading">Solutions Expertes</h2>
-          <p className="solutions-subtitle">Des solutions complètes et personnalisées pour répondre aux défis de votre infrastructure de données.</p>
+          <h2 id="main-solutions-heading">Expert Solutions</h2>
+          <p className="solutions-subtitle">Complete and personalized solutions to meet your data infrastructure challenges.</p>
           
           <div className="solutions-grid">
             <div className="solution-card">
               <div className="solution-icon">
                 <Server aria-hidden="true" />
               </div>
-              <h3>Surveillance intelligente de la qualité de service des réseaux 2G/3G/4G</h3>
-              <p>Optimisez vos réseaux télécoms avec des dashboards dynamiques. Grâce à la collecte automatisée des fichiers OMC-R et à l'analyse visuelle via la suite ELK (Elasticsearch, Logstash, Kibana), nous vous aidons à surveiller efficacement la qualité de vos réseaux mobiles.</p>
+              <h3>Intelligent monitoring of 2G/3G/4G network quality of service</h3>
+              <p>Optimize your telecom networks with dynamic dashboards. Through automated collection of OMC-R files and visual analysis via the ELK suite (Elasticsearch, Logstash, Kibana), we help you effectively monitor the quality of your mobile networks.</p>
               <ul className="solution-features">
-                <li><CheckCircle size={16} aria-hidden="true" /> Dashboards dynamiques</li>
-                <li><CheckCircle size={16} aria-hidden="true" /> Collecte automatisée</li>
-                <li><CheckCircle size={16} aria-hidden="true" /> Analyse visuelle</li>
+                <li><CheckCircle size={16} aria-hidden="true" /> Dynamic dashboards</li>
+                <li><CheckCircle size={16} aria-hidden="true" /> Automated collection</li>
+                <li><CheckCircle size={16} aria-hidden="true" /> Visual analysis</li>
               </ul>
             </div>
 
@@ -86,12 +86,12 @@ function SolutionsPage () {
               <div className="solution-icon">
                 <Activity aria-hidden="true" />
               </div>
-              <h3>Observabilité complète de vos systèmes</h3>
-              <p>Gardez un œil sur chaque aspect de votre infrastructure. Avec les Beats, Elasticsearch et Kibana, nous collectons et analysons logs, métriques et temps de disponibilité pour une visibilité temps réel et des alertes intelligentes.</p>
+              <h3>Complete observability of your systems</h3>
+              <p>Keep an eye on every aspect of your infrastructure. With Beats, Elasticsearch, and Kibana, we collect and analyze logs, metrics, and uptime for real-time visibility and intelligent alerts.</p>
               <ul className="solution-features">
-                <li><CheckCircle size={16} aria-hidden="true" /> Surveillance en temps réel</li>
-                <li><CheckCircle size={16} aria-hidden="true" /> Alertes intelligentes</li>
-                <li><CheckCircle size={16} aria-hidden="true" /> Analyse de logs et métriques</li>
+                <li><CheckCircle size={16} aria-hidden="true" /> Real-time monitoring</li>
+                <li><CheckCircle size={16} aria-hidden="true" /> Intelligent alerts</li>
+                <li><CheckCircle size={16} aria-hidden="true" /> Log and metrics analysis</li>
               </ul>
             </div>
 
@@ -99,12 +99,12 @@ function SolutionsPage () {
               <div className="solution-icon">
                 <Database aria-hidden="true" />
               </div>
-              <h3>Valorisation des données par l'analyse et la visualisation</h3>
-              <p>Transformez vos données en informations stratégiques. Nous mettons en place des pipelines de collecte, traitement et visualisation des données de toute source avec Logstash, Elasticsearch et Kibana pour une prise de décision éclairée.</p>
+              <h3>Data valorization through analysis and visualization</h3>
+              <p>Transform your data into strategic information. We implement data collection, processing, and visualization pipelines from any source with Logstash, Elasticsearch, and Kibana for informed decision-making.</p>
               <ul className="solution-features">
-                <li><CheckCircle size={16} aria-hidden="true" /> Pipelines de données</li>
-                <li><CheckCircle size={16} aria-hidden="true" /> Visualisations interactives</li>
-                <li><CheckCircle size={16} aria-hidden="true" /> Support décisionnel</li>
+                <li><CheckCircle size={16} aria-hidden="true" /> Data pipelines</li>
+                <li><CheckCircle size={16} aria-hidden="true" /> Interactive visualizations</li>
+                <li><CheckCircle size={16} aria-hidden="true" /> Decision support</li>
               </ul>
             </div>
           </div>
@@ -114,32 +114,32 @@ function SolutionsPage () {
       {/* Implementation Process */}
       <section ref={processRef} className="solutions-process" aria-labelledby="process-heading">
         <div className="solutions-container">
-          <h2 id="process-heading">Processus d'Implémentation</h2>
-          <p className="solutions-subtitle">Une approche méthodique pour garantir le succès de votre projet.</p>
+          <h2 id="process-heading">Implementation Process</h2>
+          <p className="solutions-subtitle">A methodical approach to guarantee the success of your project.</p>
           
           <div className="process-steps">
             <div className="process-step">
               <div className="step-number">1</div>
-              <h3>Analyse des Besoins</h3>
-              <p>Évaluation approfondie de votre infrastructure existante et identification des objectifs clés à atteindre.</p>
+              <h3>Needs Analysis</h3>
+              <p>Thorough evaluation of your existing infrastructure and identification of key objectives to achieve.</p>
             </div>
             
             <div className="process-step">
               <div className="step-number">2</div>
-              <h3>Conception de Solution</h3>
-              <p>Élaboration d'une architecture personnalisée répondant à vos exigences techniques et fonctionnelles.</p>
+              <h3>Solution Design</h3>
+              <p>Development of a personalized architecture meeting your technical and functional requirements.</p>
             </div>
             
             <div className="process-step">
               <div className="step-number">3</div>
-              <h3>Déploiement & Configuration</h3>
-              <p>Mise en place des composants Elastic Stack et intégration à votre environnement existant.</p>
+              <h3>Deployment & Configuration</h3>
+              <p>Implementation of Elastic Stack components and integration into your existing environment.</p>
             </div>
             
             <div className="process-step">
               <div className="step-number">4</div>
-              <h3>Formation & Support</h3>
-              <p>Transfert de compétences à vos équipes et accompagnement continu pour une autonomie progressive.</p>
+              <h3>Training & Support</h3>
+              <p>Knowledge transfer to your teams and ongoing support for progressive autonomy.</p>
             </div>
           </div>
         </div>
@@ -148,28 +148,28 @@ function SolutionsPage () {
       {/* Case Studies */}
       <section ref={casesRef} className="solutions-cases" aria-labelledby="cases-heading">
         <div className="solutions-container">
-          <h2 id="cases-heading">Études de Cas</h2>
-          <p className="solutions-subtitle">Des solutions concrètes qui résolvent des problématiques réelles.</p>
+          <h2 id="cases-heading">Case Studies</h2>
+          <p className="solutions-subtitle">Concrete solutions that solve real problems.</p>
           
           {/* Case Study 1 - Matching the first solution */}
           <div className="case-study">
             <div className="case-content">
-              <h3>Optimisation de la Qualité de Service des Réseaux Mobiles</h3>
-              <p className="case-client"><Users size={16} aria-hidden="true" /> Opérateur Télécom National</p>
-              <p>Mise en place d'une solution de surveillance intelligente pour optimiser les performances des réseaux 2G/3G/4G et améliorer l'expérience utilisateur.</p>
-              <h4>Résultats:</h4>
+              <h3>Mobile Network Quality of Service Optimization</h3>
+              <p className="case-client"><Users size={16} aria-hidden="true" /> National Telecom Operator</p>
+              <p>Implementation of an intelligent monitoring solution to optimize 2G/3G/4G network performance and improve user experience.</p>
+              <h4>Results:</h4>
               <ul>
-                <li>Réduction de 40% des temps d'identification des incidents</li>
-                <li>Amélioration de 25% de la qualité de service perçue</li>
-                <li>Tableaux de bord centralisés pour la prise de décision</li>
+                <li>40% reduction in incident identification times</li>
+                <li>25% improvement in perceived quality of service</li>
+                <li>Centralized dashboards for decision-making</li>
               </ul>
-              <a href="/contact" className="case-link">En savoir plus <ArrowRight size={16} /></a>
+              <a href="/contact" className="case-link">Learn more <ArrowRight size={16} /></a>
             </div>
             <div className="case-image" aria-hidden="true">
               <div className="case-placeholder">
                 <img 
                   src={servicesReseauTelecomImg}
-                  alt="Optimisation de la Qualité de Service des Réseaux Mobiles" 
+                  alt="Mobile Network Quality of Service Optimization" 
                   loading="lazy"
                 />
               </div>
@@ -182,44 +182,44 @@ function SolutionsPage () {
               <div className="case-placeholder">
                 <img 
                   src={SurveillanceAvanceInfrastructureImg}
-                  alt="Surveillance Avancé d'Infrastructure Cloud" 
+                  alt="Advanced Cloud Infrastructure Monitoring" 
                   loading="lazy"
                 />
               </div>
             </div>
             <div className="case-content">
-              <h3>Monitoring Avancé d'Infrastructure Cloud</h3>
-              <p className="case-client"><Users size={16} aria-hidden="true" /> Entreprise SaaS</p>
-              <p>Déploiement d'une solution d'observabilité complète pour surveiller et optimiser une infrastructure cloud critique hébergeant des applications métier.</p>
-              <h4>Résultats:</h4>
+              <h3>Advanced Cloud Infrastructure Monitoring</h3>
+              <p className="case-client"><Users size={16} aria-hidden="true" /> SaaS Company</p>
+              <p>Deployment of a complete observability solution to monitor and optimize a critical cloud infrastructure hosting business applications.</p>
+              <h4>Results:</h4>
               <ul>
-                <li>Détection proactive des anomalies réduisant les temps d'arrêt de 60%</li>
-                <li>Visibilité complète sur les performances des applications</li>
-                <li>Réduction des coûts d'infrastructure de 20% grâce à l'optimisation</li>
+                <li>Proactive anomaly detection reducing downtime by 60%</li>
+                <li>Complete visibility on application performance</li>
+                <li>20% reduction in infrastructure costs through optimization</li>
               </ul>
-              <a href="/contact" className="case-link">En savoir plus <ArrowRight size={16} /></a>
+              <a href="/contact" className="case-link">Learn more <ArrowRight size={16} /></a>
             </div>
           </div>
           
           {/* Case Study 3 - Matching the third solution */}
           <div className="case-study" style={{ marginTop: "2rem" }}>
             <div className="case-content">
-              <h3>Transformation des Données en Insights Commerciaux</h3>
-              <p className="case-client"><Users size={16} aria-hidden="true" /> Groupe de Distribution</p>
-              <p>Création d'une plateforme d'analyse et de visualisation des données commerciales pour optimiser les décisions stratégiques et opérationnelles.</p>
-              <h4>Résultats:</h4>
+              <h3>Transforming Data into Business Insights</h3>
+              <p className="case-client"><Users size={16} aria-hidden="true" /> Distribution Group</p>
+              <p>Creation of a commercial data analysis and visualization platform to optimize strategic and operational decisions.</p>
+              <h4>Results:</h4>
               <ul>
-                <li>Augmentation de 15% du chiffre d'affaires grâce aux insights clients</li>
-                <li>Optimisation des stocks basée sur l'analyse prédictive</li>
-                <li>Tableaux de bord personnalisés par département pour une meilleure prise de décision</li>
+                <li>15% increase in revenue through customer insights</li>
+                <li>Inventory optimization based on predictive analysis</li>
+                <li>Personalized dashboards by department for better decision-making</li>
               </ul>
-              <a href="/contact" className="case-link">En savoir plus <ArrowRight size={16} /></a>
+              <a href="/contact" className="case-link">Learn more <ArrowRight size={16} /></a>
             </div>
             <div className="case-image" aria-hidden="true">
               <div className="case-placeholder">
                 <img 
                   src={TransformationDonneesImg}
-                  alt="Transformation des Données en Insights Commerciaux"
+                  alt="Transforming Data into Business Insights"
                   loading="lazy"
                 />
               </div>
@@ -231,14 +231,14 @@ function SolutionsPage () {
       {/* CTA Section */}
       <section ref={ctaRef} className="solutions-cta-section" aria-labelledby="cta-heading">
         <div className="solutions-container">
-          <h2 id="cta-heading">Prêt à Transformer vos Données en Avantage Stratégique?</h2>
-          <p>Discutons ensemble de votre projet et des solutions adaptées à vos besoins spécifiques.</p>
+          <h2 id="cta-heading">Ready to Transform Your Data into Strategic Advantage?</h2>
+          <p>Let's discuss your project and solutions adapted to your specific needs together.</p>
           <div className="cta-buttons">
             <a href="/contact" className="solutions-primary-btn">
-              Demander une consultation <ArrowRight size={18} />
+              Request a consultation <ArrowRight size={18} />
             </a>
             <a href="/skills" className="solutions-secondary-btn">
-              Découvrir mes expertises
+              Discover my expertise
             </a>
           </div>
         </div>

@@ -39,15 +39,15 @@ function AboutExpertiseTelecom() {
     >
       <div className="container">
         {/* <h2 id="expertise-telecom-title" className="section-title">
-          <span className="accent-text">Une expertise télécom</span> solide au service de vos données
+          <span className="accent-text">Solid telecom expertise</span> at the service of your data
         </h2> */}
         
         <div className="expertise-content">
           {/* <div className="intro-text">
             <p>
-              En tant qu'<strong>ingénieur télécom</strong>, avec une spécialisation en 
-              <strong> qualité de service (QoS) des réseaux mobiles</strong>, j'apporte une 
-              <strong> compréhension fine de la donnée technique</strong> dans les projets liés aux télécoms.
+              As a <strong>telecommunications engineer</strong>, with specialization in 
+              <strong> Quality of Service (QoS) for mobile networks</strong>, I bring a 
+              <strong> deep understanding of technical data</strong> in telecom-related projects.
             </p>
           </div>
           
@@ -57,8 +57,8 @@ function AboutExpertiseTelecom() {
                 <Award className="credential-icon" size={32} />
               </div>
               <div className="credential-content">
-                <h3>Certification UIT Academy</h3>
-                <p>Certifié sur la qualité de service des réseaux télécoms.</p>
+                <h3>ITU Academy Certification</h3>
+                <p>Certified in telecommunications network quality of service.</p>
               </div>
             </div>
             
@@ -67,8 +67,8 @@ function AboutExpertiseTelecom() {
                 <Network className="credential-icon" size={32} />
               </div>
               <div className="credential-content">
-                <h3>Architecture Réseaux Mobiles</h3>
-                <p>Solide maîtrise de l'architecture des réseaux mobiles 2G/3G/4G, des KPI et de leur suivi opérationnel.</p>
+                <h3>Mobile Network Architecture</h3>
+                <p>Strong mastery of 2G/3G/4G mobile network architecture, KPIs, and their operational monitoring.</p>
               </div>
             </div>
             
@@ -77,16 +77,16 @@ function AboutExpertiseTelecom() {
                 <FileText className="credential-icon" size={32} />
               </div>
               <div className="credential-content">
-                <h3>Auteur Projet QoS 4G</h3>
-                <p>Projet détaillé sur le monitoring de la QoS 4G, incluant l'architecture des réseaux et les indicateurs QoS.</p>
+                <h3>Author of 4G QoS Project</h3>
+                <p>Detailed project on 4G QoS monitoring, including network architecture and QoS indicators.</p>
                 <a 
                   href="https://www.researchgate.net/publication/376679223_VDR_and_PDIA3_Are_Essential_for_Activation_of_Calcium_Signaling_and_Membrane_Response_to_125OH2D3_in_Squamous_Cell_Carcinoma_Cells" 
                   className="project-link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Lire le document de recherche sur ResearchGate"
+                  aria-label="Read the research document on ResearchGate"
                 >
-                  Lire le document
+                  Read the document
                 </a>
               </div>
             </div>
@@ -97,28 +97,28 @@ function AboutExpertiseTelecom() {
               <Radio size={40} />
             </div>
             <p>
-              Avec cette double compétence <strong>données & télécoms</strong>, je propose des 
-              solutions techniques précises, alignées à la fois sur les <strong>besoins métiers</strong> et 
-              les <strong>exigences d'infrastructure</strong>.
+              With this dual expertise in <strong>data & telecommunications</strong>, I offer 
+              precise technical solutions, aligned with both <strong>business needs</strong> and 
+              <strong>infrastructure requirements</strong>.
             </p>
           </div>
           
           <div className="expertise-badges">
             <div className="badge">
               <CheckCircle size={20} />
-              <span>Architecture réseaux</span>
+              <span>Network architecture</span>
             </div>
             <div className="badge">
               <CheckCircle size={20} />
-              <span>QoS Télécom</span>
+              <span>Telecom QoS</span>
             </div>
             <div className="badge">
               <CheckCircle size={20} />
-              <span>KPI Techniques</span>
+              <span>Technical KPIs</span>
             </div>
             <div className="badge">
               <CheckCircle size={20} />
-              <span>Analyse des données</span>
+              <span>Data analysis</span>
             </div>
           </div>
         </div>

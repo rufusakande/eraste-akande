@@ -55,9 +55,9 @@ const AboutValues = () => {
   return (
     <section id="aboutValues" ref={valuesRef} className="about-values">
       <div className="about-values__container">
-        <h2 className="about-values__title">Mes valeurs professionnelles</h2>
+        <h2 className="about-values__title">My professional values</h2>
         <p className="about-values__subtitle">
-          Les principes qui guident mon approche en tant que consultant et formateur
+          The principles that guide my approach as a consultant and trainer
         </p>
         
         <div className="about-values__grid">
@@ -68,10 +68,10 @@ const AboutValues = () => {
             <div className="about-values__card-icon">
               <Code size={32} />
             </div>
-            <h3 className="about-values__card-title">Excellence technique</h3>
+            <h3 className="about-values__card-title">Technical excellence</h3>
             <p className="about-values__card-text">
-              Je m'engage à maintenir une expertise de pointe sur les technologies Elasticsearch 
-              et à fournir des solutions optimales basées sur les meilleures pratiques.
+              I commit to maintaining cutting-edge expertise in Elasticsearch technologies 
+              and providing optimal solutions based on best practices.
             </p>
           </div>
           
@@ -82,10 +82,10 @@ const AboutValues = () => {
             <div className="about-values__card-icon">
               <Database size={32} />
             </div>
-            <h3 className="about-values__card-title">Solutions adaptées</h3>
+            <h3 className="about-values__card-title">Tailored solutions</h3>
             <p className="about-values__card-text">
-              Chaque entreprise est unique. Je développe des approches personnalisées 
-              qui répondent précisément à vos besoins spécifiques en matière de données.
+              Every company is unique. I develop personalized approaches 
+              that precisely meet your specific data needs.
             </p>
           </div>
           
@@ -96,10 +96,10 @@ const AboutValues = () => {
             <div className="about-values__card-icon">
               <Shield size={32} />
             </div>
-            <h3 className="about-values__card-title">Sécurité avant tout</h3>
+            <h3 className="about-values__card-title">Security first</h3>
             <p className="about-values__card-text">
-              La protection des données est non-négociable. J'implémente des solutions 
-              robustes qui garantissent la sécurité et la conformité de vos infrastructures.
+              Data protection is non-negotiable. I implement robust solutions 
+              that guarantee the security and compliance of your infrastructures.
             </p>
           </div>
           
@@ -110,10 +110,10 @@ const AboutValues = () => {
             <div className="about-values__card-icon">
               <BookOpen size={32} />
             </div>
-            <h3 className="about-values__card-title">Transmission du savoir</h3>
+            <h3 className="about-values__card-title">Knowledge transfer</h3>
             <p className="about-values__card-text">
-              Je crois fermement au partage des connaissances. Ma mission est de vous rendre 
-              autonome dans la gestion de vos solutions Elasticsearch.
+              I firmly believe in knowledge sharing. My mission is to make you 
+              autonomous in managing your Elasticsearch solutions.
             </p>
           </div>
         </div>

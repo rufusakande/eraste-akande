@@ -55,7 +55,7 @@ const AboutJourney = () => {
   return (
     <section id="aboutJourney" ref={journeyRef} className="about-journey">
       <div className="about-journey__container">
-        <h2 className="about-journey__title">Un parcours reconnu</h2>
+        <h2 className="about-journey__title">A recognized journey</h2>
         
         <div className="about-journey__timeline">
           <div 
@@ -66,11 +66,11 @@ const AboutJourney = () => {
               <GraduationCap size={24} />
             </div>
             <div className="about-journey__timeline-content">
-              <h3 className="about-journey__timeline-title">INPT – Diplôme d'ingénieur télécom</h3>
-              <p className="about-journey__timeline-date">Formation d'excellence</p>
+              <h3 className="about-journey__timeline-title">INPT – Telecommunications Engineering Degree</h3>
+              <p className="about-journey__timeline-date">Excellence in Education</p>
               <p className="about-journey__timeline-description">
-                Formation d'ingénieur en télécommunications à l'Institut National des Postes et Télécommunications, 
-                établissement d'élite au Maroc.
+                Telecommunications engineering education at the National Institute of Posts and Telecommunications, 
+                an elite institution in Morocco.
               </p>
             </div>
           </div>
@@ -86,8 +86,8 @@ const AboutJourney = () => {
               <h3 className="about-journey__timeline-title">Netopia – Business Analyst</h3>
               <p className="about-journey__timeline-date">2020 - 2021</p>
               <p className="about-journey__timeline-description">
-                Expérience en tant que Business Analyst chez Netopia, développant une expertise 
-                dans l'analyse de données et les processus d'affaires.
+                Experience as Business Analyst at Netopia, developing expertise 
+                in data analysis and business processes.
               </p>
             </div>
           </div>
@@ -101,10 +101,10 @@ const AboutJourney = () => {
             </div>
             <div className="about-journey__timeline-content">
               <h3 className="about-journey__timeline-title">Synaptique – Telecom Data Engineer</h3>
-              <p className="about-journey__timeline-date">2021 - Aujourd'hui</p>
+              <p className="about-journey__timeline-date">2021 - Present</p>
               <p className="about-journey__timeline-description">
-                Ingénieur de données télécom chez Synaptique, spécialisé dans la conception 
-                et l'implémentation de solutions de traitement de données pour le secteur des télécommunications.
+                Telecommunications data engineer at Synaptique, specialized in designing 
+                and implementing data processing solutions for the telecommunications sector.
               </p>
             </div>
           </div>
@@ -117,11 +117,11 @@ const AboutJourney = () => {
               <FileText size={24} />
             </div>
             <div className="about-journey__timeline-content">
-              <h3 className="about-journey__timeline-title">Certification en régulation de la qualité de service Telecom</h3>
-              <p className="about-journey__timeline-date">2021 - Académie UIT</p>
+              <h3 className="about-journey__timeline-title">Certification in Telecom Quality of Service Regulation</h3>
+              <p className="about-journey__timeline-date">2021 - ITU Academy</p>
               <p className="about-journey__timeline-description">
-                Obtention d'une certification spécialisée en régulation de la qualité de service 
-                dans le secteur des télécommunications, délivrée par l'Académie de l'Union Internationale des Télécommunications.
+                Obtained specialized certification in quality of service regulation 
+                in the telecommunications sector, delivered by the International Telecommunication Union Academy.
               </p>
             </div>
           </div>
@@ -137,8 +137,8 @@ const AboutJourney = () => {
               <h3 className="about-journey__timeline-title">Elastic Engineer Certified</h3>
               <p className="about-journey__timeline-date">2022</p>
               <p className="about-journey__timeline-description">
-                Obtention de la certification Elastic Engineer, validant une expertise technique approfondie 
-                dans le déploiement et la gestion des solutions Elasticsearch.
+                Obtained Elastic Engineer certification, validating deep technical expertise 
+                in deploying and managing Elasticsearch solutions.
               </p>
             </div>
           </div>
@@ -151,12 +151,11 @@ const AboutJourney = () => {
               <Briefcase size={24} />
             </div>
             <div className="about-journey__timeline-content">
-              <h3 className="about-journey__timeline-title">Consultant Elasticsearch & Opensearch</h3>
-              <p className="about-journey__timeline-date">2024 - Aujourd'hui</p>
+              <h3 className="about-journey__timeline-title">Elasticsearch & Opensearch Consultant</h3>
+              <p className="about-journey__timeline-date">2024 - Present</p>
               <p className="about-journey__timeline-description">
-                Prestation de services de consultation spécialisés en Elasticsearch et Opensearch, 
-                accompagnant les entreprises dans l'implémentation et l'optimisation de solutions 
-                de recherche et d'analyse de données.
+                Providing specialized consulting services in Elasticsearch and Opensearch, 
+                helping companies implement and optimize search and data analysis solutions.
               </p>
             </div>
           </div>
@@ -172,8 +171,8 @@ const AboutJourney = () => {
               <h3 className="about-journey__timeline-title">Elastic Gold Contributor</h3>
               <p className="about-journey__timeline-date">2025</p>
               <p className="about-journey__timeline-description">
-                Désigné Gold Contributor par Elastic pour l'Europe, l'Afrique et l'Asie, 
-                en reconnaissance de ma contribution active à la communauté et mon expertise technique.
+                Designated Gold Contributor by Elastic for Europe, Africa, and Asia, 
+                in recognition of my active contribution to the community and technical expertise.
               </p>
             </div>
           </div>
@@ -186,12 +185,12 @@ const AboutJourney = () => {
               <BookOpen size={24} />
             </div>
             <div className="about-journey__timeline-content">
-              <h3 className="about-journey__timeline-title">Formateur ELK</h3>
-              <p className="about-journey__timeline-date">2025 - Aujourd'hui</p>
+              <h3 className="about-journey__timeline-title">ELK Trainer</h3>
+              <p className="about-journey__timeline-date">2025 - Present</p>
               <p className="about-journey__timeline-description">
-                Transmission de connaissances et partage d'expertise en tant que formateur spécialisé 
-                dans la stack ELK (Elasticsearch, Logstash, Kibana), formant la prochaine génération 
-                de professionnels des données.
+                Knowledge transmission and expertise sharing as a specialized trainer 
+                in the ELK stack (Elasticsearch, Logstash, Kibana), training the next generation 
+                of data professionals.
               </p>
             </div>
           </div>

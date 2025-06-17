@@ -5,40 +5,40 @@ import './Hero.css';
 import iyanuEraste from '../../assets/Images/erasteAkande.webp';
 
 const Hero = () => {
-  // Tableau contenant les titres et sous-titres
+  // Array containing titles and subtitles
   const heroContent = [
     {
-      title: "Optimisez vos données avec un expert certifié Elasticsearch",
-      subtitle: "Je suis Iyanou Eraste AKANDE, consultant Elasticsearch et formateur certifié Elastic Engineer. J'accompagne les entreprises dans la mise en place de solutions de recherche, monitoring et analyse de données en temps réel."
+      title: "Optimize your data with a certified Elasticsearch expert",
+      subtitle: "I am Iyanou Eraste AKANDE, Elasticsearch consultant and certified Elastic Engineer trainer. I help companies implement search, monitoring, and real-time data analysis solutions."
     },
     {
-      title: "Une expertise télécom solide au service de vos données",
-      subtitle: "En tant qu'ingénieur télécom, avec une spécialisation en qualité de service (QoS) des réseaux mobiles, j'apporte une compréhension fine de la donnée technique dans les projets liés aux télécoms."
+      title: "Solid telecom expertise at the service of your data",
+      subtitle: "As a telecommunications engineer, with specialization in Quality of Service (QoS) for mobile networks, I bring a deep understanding of technical data in telecom-related projects."
     }
   ];
 
-  // État pour suivre l'index du contenu actuellement affiché
+  // State to track the index of currently displayed content
   const [currentIndex, setCurrentIndex] = useState(0);
-  // États pour gérer les animations de fade
+  // States to manage fade animations
   const [isVisible, setIsVisible] = useState(true);
 
-  // Effet pour faire défiler le contenu
+  // Effect to cycle through content
   useEffect(() => {
     const interval = setInterval(() => {
-      // Masquer le contenu actuel
+      // Hide current content
       setIsVisible(false);
       
-      // Changer d'index après la fin de l'animation de disparition
+      // Change index after fade-out animation ends
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % heroContent.length);
         
-        // Réafficher le nouveau contenu
+        // Show new content
         setTimeout(() => {
           setIsVisible(true);
         }, 100);
-      }, 500); // Délai correspondant à la durée de l'animation de fade-out
+      }, 500); // Delay corresponding to fade-out animation duration
       
-    }, 5000); // Changer tous les 5 secondes
+    }, 5000); // Change every 5 seconds
     
     return () => clearInterval(interval);
   }, [heroContent.length]);
@@ -59,10 +59,10 @@ const Hero = () => {
           </div>
           <div className="hero-cta">
             <a href="/contact" className="cta-button primary">
-              Discutons <ArrowRight size={18} className="cta-icon" />
+              Let's talk <ArrowRight size={18} className="cta-icon" />
             </a>
             <a href="/skills" className="cta-button secondary">
-              Voir mes expertises
+              View my expertise
             </a>
           </div>
         </div>

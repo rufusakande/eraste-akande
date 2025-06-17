@@ -34,19 +34,19 @@ const CorporateTraining = () => {
   const features = [
     {
       icon: <Users size={20} className="corporate-training__feature-icon" aria-hidden="true" />,
-      text: "Formations adaptées à tous les niveaux"
+      text: "Training adapted to all levels"
     },
     {
       icon: <Building size={20} className="corporate-training__feature-icon" aria-hidden="true" />,
-      text: "Personnalisation selon vos besoins spécifiques"
+      text: "Customization according to your specific needs"
     },
     {
       icon: <Clock size={20} className="corporate-training__feature-icon" aria-hidden="true" />,
-      text: "Ateliers d'une journée ou programmes complets"
+      text: "One-day workshops or complete programs"
     },
     {
       icon: <Map size={20} className="corporate-training__feature-icon" aria-hidden="true" />,
-      text: "En présentiel ou à distance"
+      text: "In-person or remote"
     }
   ];
 
@@ -54,11 +54,11 @@ const CorporateTraining = () => {
     <section id="corporate-training" className="corporate-training" ref={sectionRef}>
       <div className="corporate-training__container">
         <div className="corporate-training__content" ref={contentRef}>
-          <h2 className="corporate-training__title">Formations en entreprise</h2>
+          <h2 className="corporate-training__title">Corporate Training</h2>
           <p className="corporate-training__description">
-            Je propose des formations personnalisées directement dans vos locaux ou à distance. 
-            Spécialement conçues pour les équipes techniques, ces formations couvrent Elasticsearch, 
-            le monitoring de données, et les technologies télécom.
+            I offer personalized training directly at your premises or remotely. 
+            Specially designed for technical teams, these trainings cover Elasticsearch, 
+            data monitoring, and telecom technologies.
           </p>
           
           <ul className="corporate-training__features">
@@ -71,7 +71,7 @@ const CorporateTraining = () => {
           </ul>
           
           <div className="corporate-training__topics">
-            <h3 className="corporate-training__topics-title">Thématiques disponibles :</h3>
+            <h3 className="corporate-training__topics-title">Available topics:</h3>
             <div className="corporate-training__topics-grid">
               <span className="corporate-training__topic">Elasticsearch</span>
               <span className="corporate-training__topic">Kibana</span>
@@ -79,20 +79,20 @@ const CorporateTraining = () => {
               <span className="corporate-training__topic">Beats</span>
               <span className="corporate-training__topic">Opensearch</span>
               <span className="corporate-training__topic">Kafka</span>
-              <span className="corporate-training__topic">Monitoring Data</span>
-              <span className="corporate-training__topic">Télécom</span>
+              <span className="corporate-training__topic">Data Monitoring</span>
+              <span className="corporate-training__topic">Telecom</span>
             </div>
           </div>
           
           <a href="contact" className="corporate-training__cta">
-            Demander un devis
+            Request a quote
           </a>
         </div>
         
         <div className="corporate-training__image-container" ref={imageRef}>
           <img 
             src={ElasticsearchImg}
-            alt="Formation en entreprise par Iyanou Eraste AKANDE" 
+            alt="Corporate training by Iyanou Eraste AKANDE" 
             className="corporate-training__image"
             loading="lazy"
           />

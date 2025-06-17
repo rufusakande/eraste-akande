@@ -37,18 +37,18 @@ const CallToAction = () => {
       <div className="call-to-action__container">
         <div className="call-to-action__content">
           <h2 id="cta-heading" className="call-to-action__title">
-            Prêt à optimiser votre infrastructure de données ?
+            Ready to optimize your data infrastructure?
           </h2>
           <p className="call-to-action__description">
-            Discutons de vos besoins et trouvons ensemble la solution adaptée à vos enjeux.
+            Let's discuss your needs and find the right solution for your challenges together.
           </p>
           
           <div className="call-to-action__buttons">
             <a href="/contact" className="call-to-action__button call-to-action__button--primary">
-              Prendre rendez-vous <ArrowRight size={18} className="call-to-action__button-icon" aria-hidden="true" />
+              Schedule an appointment <ArrowRight size={18} className="call-to-action__button-icon" aria-hidden="true" />
             </a>
             <a href="/services/training" className="call-to-action__button call-to-action__button--secondary">
-              Découvrir mes formations
+              Discover my training
             </a>
           </div>
         </div>

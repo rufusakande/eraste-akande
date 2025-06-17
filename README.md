@@ -1,24 +1,24 @@
 # 🌐 Portfolio – Iyanou Eraste AKANDE
 
-Bienvenue sur le dépôt officiel du portfolio professionnel d'Iyanou Eraste AKANDE – Ingénieur Télécoms, Consultant Elasticsearch certifié, Formateur Elastic et Elastic Gold Contributor.
+Welcome to the official repository of Iyanou Eraste AKANDE's professional portfolio – Telecommunications Engineer, Certified Elasticsearch Consultant, Elastic Trainer, and Elastic Gold Contributor.
 
-Ce site met en valeur son expertise à travers des projets concrets, des formations, et des solutions data orientées télécoms et analyse de logs.
+This site showcases his expertise through concrete projects, training programs, and data solutions focused on telecommunications and log analysis.
 
-## 🚀 Technologies utilisées
+## 🚀 Technologies Used
 
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
-- CSS3 (responsive, moderne, et optimisé)
-- [Tailwind CSS (optionnel si utilisé)](https://tailwindcss.com/)
+- CSS3 (responsive, modern, and optimized)
+- [Tailwind CSS (optional if used)](https://tailwindcss.com/)
 
-## 🧠 Objectifs du projet
+## 🧠 Project Objectives
 
-- Présenter les projets réalisés en télécommunications et en Elasticsearch.
-- Valoriser les compétences techniques et certifications d’Eraste.
-- Offrir une interface claire et professionnelle pour les potentiels recruteurs, partenaires et apprenants.
-- Évolutif : futur ajout d’un blog technique, d’un espace admin et de ressources pédagogiques.
+- Present projects completed in telecommunications and Elasticsearch.
+- Showcase Eraste's technical skills and certifications.
+- Provide a clear and professional interface for potential recruiters, partners, and learners.
+- Scalable: future addition of a technical blog, admin space, and educational resources.
 
-## 📁 Structure du projet
+## 📁 Project Structure
 
 ```bash
 /
@@ -32,3 +32,4 @@ Ce site met en valeur son expertise à travers des projets concrets, des formati
 ├── README.md
 ├── vite.config.js
 └── package.json
+```

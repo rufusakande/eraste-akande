@@ -10,7 +10,7 @@ const HeroPortfolio = () => {
   const imageRef = useRef(null);
 
   useEffect(() => {
-    // Ajout immédiat des classes animate pour les éléments déjà visibles
+    // Immediate addition of animate classes for elements already visible
     const isInViewport = (element) => {
       const rect = element.getBoundingClientRect();
       return (
@@ -28,7 +28,7 @@ const HeroPortfolio = () => {
       }
     });
 
-    // Configuration de l'IntersectionObserver pour les éléments qui entrent dans la vue
+    // IntersectionObserver configuration for elements entering the view
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -56,14 +56,14 @@ const HeroPortfolio = () => {
       <div className="hero-portfolio__container">
         <div ref={contentRef} className="hero-portfolio__content">
           <h1 ref={titleRef} className="hero-portfolio__title" id="hero-title">
-             Elasticsearch & Télécoms au service de la performance
+             Elasticsearch & Telecommunications at the service of performance
           </h1>
           <p ref={subtitleRef} className="hero-portfolio__subtitle">
-            Découvrez mes projets d'optimisation et d'implémentation Elastic Stack qui ont permis à mes clients d'améliorer leur prise de décision et leur performance opérationnelle.
+            Discover my optimization and Elastic Stack implementation projects that have enabled my clients to improve their decision-making and operational performance.
           </p>
           <div ref={ctaRef} className="hero-portfolio__cta">
             <a href="#projects" className="hero-portfolio__button">
-              Explorer mes projets <ChevronRight size={18} />
+              Explore my projects <ChevronRight size={18} />
             </a>
           </div>
         </div>

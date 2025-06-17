@@ -1,4 +1,4 @@
-// Header.jsx - Version corrigée
+// Header.jsx - Corrected version
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Search, ChevronDown } from 'lucide-react';
@@ -19,14 +19,14 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Effet pour fermer le menu et restaurer le scroll lors du changement de route
+  // Effect to close menu and restore scroll when route changes
   useEffect(() => {
     setIsMenuOpen(false);
     setActiveDropdown(null);
-    document.body.style.overflow = 'auto'; // Restaurer le scroll
+    document.body.style.overflow = 'auto'; // Restore scroll
   }, [location.pathname]);
 
-  // Effet pour nettoyer le style overflow au démontage du composant
+  // Effect to clean up overflow style on component unmount
   useEffect(() => {
     return () => {
       document.body.style.overflow = 'auto';
@@ -48,7 +48,7 @@ const Header = () => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
 
-  // Nouvelle fonction pour gérer les clics sur les liens
+  // New function to handle link clicks
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null);
@@ -56,18 +56,18 @@ const Header = () => {
   };
 
   const navItems = [
-    { title: 'Accueil', link: '/' },
+    { title: 'Home', link: '/' },
     { 
       title: 'Services', 
       link: '/services',
       dropdown: [
         { title: 'Solutions', link: '/services/solution' },
-        { title: 'Consultation', link: '/services/consulting' },
-        { title: 'Formation', link: '/services/training' }
+        { title: 'Consulting', link: '/services/consulting' },
+        { title: 'Training', link: '/services/training' }
       ]
     },
-    { title: 'À propos', link: '/about' },
-    { title: 'Compétences', link: '/skills' },
+    { title: 'About', link: '/about' },
+    { title: 'Skills', link: '/skills' },
     { title: 'Portfolio', link: '/portfolio' },
     { title: 'Contact', link: '/contact' }
   ];
@@ -76,9 +76,9 @@ const Header = () => {
       <header id="header" className={`header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="header-container">
           <div className="logo">
-            <a href="/" aria-label="Accueil">
+            <a href="/" aria-label="Home">
               <span className="logo-text">Iyanou Eraste AKANDE</span>
-              <span className="logo-subtitle">Ingénieur de données | Consultant Elasticsearch</span>
+              <span className="logo-subtitle">Data Engineer | Elasticsearch Consultant</span>
             </a>
           </div>
           
@@ -120,27 +120,27 @@ const Header = () => {
           </nav>
 
           <div className="header-actions">
-            <button className="search-button" aria-label="Rechercher">
+            <button className="search-button" aria-label="Search">
               <Search size={20} />
             </button>
             <button 
               className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} 
               onClick={toggleMenu}
               aria-expanded={isMenuOpen}
-              aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
-        {/* Menu Mobile */}
+        {/* Mobile Menu */}
         <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
           <button 
               className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} 
               onClick={toggleMenu}
               aria-expanded={isMenuOpen}
-              aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               style={{color:'white', position:'absolute', top:'20px', right:'20px'}}
             >
               {isMenuOpen ? <X size={32} /> : <Menu size={24} />}

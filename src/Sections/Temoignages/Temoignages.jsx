@@ -33,7 +33,7 @@ const Temoignages = () => {
     <section id="temoignages" ref={sectionRef} className="temoignages-section">
       <div className="temoignages-container">
         <div className="temoignages-title-container">
-          <h2 className="temoignages-title">Impact & Confiance</h2>
+          <h2 className="temoignages-title">Impact & Trust</h2>
           <div className="temoignages-underline"></div>
         </div>
         
@@ -42,12 +42,12 @@ const Temoignages = () => {
             <Award size={48} color="#E4B31A" />
           </div>
           <p className="temoignages-quote">
-            "Déjà plus de <span className="temoignages-highlight">100 professionnels</span> formés à Elasticsearch en ligne et en entreprise."
+            "Already more than <span className="temoignages-highlight">100 professionals</span> trained in Elasticsearch online and in-company."
           </p>
         </div>
         
         <div className="temoignages-future-indicator">
-          <p>Témoignages clients à venir</p>
+          <p>Client testimonials coming soon</p>
         </div>
       </div>
     </section>

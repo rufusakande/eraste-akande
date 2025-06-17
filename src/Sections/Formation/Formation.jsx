@@ -49,10 +49,10 @@ const Formation = () => {
     };
   }, []);
 
-  // Réinitialiser les références lors des re-rendus
+  // Reset references on re-renders
   featuresRef.current = [];
 
-  // Fonction pour ajouter des références aux éléments
+  // Function to add references to elements
   const addToRefs = (el) => {
     if (el && !featuresRef.current.includes(el)) {
       featuresRef.current.push(el);
@@ -62,23 +62,23 @@ const Formation = () => {
   const features = [
     {
       icon: <Clock />,
-      title: "Accès à vie",
-      description: "Profitez du contenu et des mises à jour sans limite dans le temps"
+      title: "Lifetime Access",
+      description: "Enjoy content and updates without time limits"
     },
     {
       icon: <Video />,
-      title: "Exercices pratiques",
-      description: "Consolidez vos connaissances avec des cas pratiques réels"
+      title: "Practical Exercises",
+      description: "Consolidate your knowledge with real practical cases"
     },
     {
       icon: <Award />,
-      title: "Certificat",
-      description: "Obtenez un certificat de réussite à la fin de la formation"
+      title: "Certificate",
+      description: "Get a completion certificate at the end of the training"
     },
     {
       icon: <MessageCircle />,
-      title: "Support direct",
-      description: "Posez vos questions et recevez une réponse d'expert"
+      title: "Direct Support",
+      description: "Ask your questions and receive expert answers"
     }
   ];
 
@@ -86,25 +86,25 @@ const Formation = () => {
     <section id="formation" ref={sectionRef} className="formation-section">
       <div className="formation-container">
         <div className="formation-header">
-          <h2 className="formation-title">Formez-vous avec un expert certifié</h2>
+          <h2 className="formation-title">Train with a certified expert</h2>
           <div className="formation-title-underline"></div>
         </div>
 
         <div className="formation-content" ref={contentRef}>
           <div className="formation-image-container">
             <div className="formation-image-wrapper">
-              <div className="formation-image-placeholder" aria-label="Image de la formation Elasticsearch">
-                <span className="formation-image-text">Maîtriser Elasticsearch</span>
+              <div className="formation-image-placeholder" aria-label="Elasticsearch training image">
+                <span className="formation-image-text">Master Elasticsearch</span>
               </div>
-              <div className="formation-image-badge">Français & Anglais</div>
+              <div className="formation-image-badge">French & English</div>
             </div>
           </div>
 
           <div className="formation-details">
-            <h3 className="formation-details-title">Maîtriser Elasticsearch : De l'Initiation à la Certification</h3>
+            <h3 className="formation-details-title">Master Elasticsearch: From Beginner to Certification</h3>
             <p className="formation-details-description">
-              Découvrez ma formation complète disponible sur Udemy. Plus de 8h de contenu exclusif pour maîtriser le déploiement, 
-              l'optimisation et l'administration d'un cluster Elasticsearch.
+              Discover my comprehensive training available on Udemy. Over 8 hours of exclusive content to master 
+              deployment, optimization, and administration of an Elasticsearch cluster.
             </p>
 
             <div className="formation-features">
@@ -126,8 +126,8 @@ const Formation = () => {
               ))}
             </div>
 
-            <a href="https://www.udemy.com/course/maitriser-elasticsearch/?couponCode=ST7MT290425G1" className="formation-cta" aria-label="Accéder à la formation sur Udemy">
-              <span>Accéder à la formation</span>
+            <a href="https://www.udemy.com/course/maitriser-elasticsearch/?couponCode=ST7MT290425G1" className="formation-cta" aria-label="Access training on Udemy">
+              <span>Access the training</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="formation-cta-icon">
                 <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>

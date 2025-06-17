@@ -36,24 +36,24 @@ const ExpertiseHero = () => {
     >
       <div className="expertise-hero__content">
         <h1 id="expertise-heading" className="expertise-hero__title">
-          Expertises Techniques
+          Technical Expertise
         </h1>
         <p className="expertise-hero__subtitle">
-          Des solutions data performantes, sécurisées et adaptées à vos besoins
+          High-performance, secure data solutions adapted to your needs
         </p>
         
         <div className="expertise-hero__icons">
           <div className="expertise-hero__icon-container">
             <Database size={48} className="expertise-hero__icon" aria-hidden="true" />
-            <span className="expertise-hero__icon-label">Gestion de données</span>
+            <span className="expertise-hero__icon-label">Data management</span>
           </div>
           <div className="expertise-hero__icon-container">
             <Code size={48} className="expertise-hero__icon" aria-hidden="true" />
-            <span className="expertise-hero__icon-label">Développement</span>
+            <span className="expertise-hero__icon-label">Development</span>
           </div>
           <div className="expertise-hero__icon-container">
             <Shield size={48} className="expertise-hero__icon" aria-hidden="true" />
-            <span className="expertise-hero__icon-label">Sécurisation</span>
+            <span className="expertise-hero__icon-label">Security</span>
           </div>
         </div>
       </div>

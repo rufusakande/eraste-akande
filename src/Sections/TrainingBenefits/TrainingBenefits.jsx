@@ -43,32 +43,32 @@ const TrainingBenefits = () => {
   const benefits = [
     {
       icon: <CheckCircle className="training-benefits__card-icon" aria-hidden="true" />,
-      title: "Quiz et exercices pratiques",
-      description: "Consolidez vos acquis avec des exercices pratiques et des quiz interactifs tout au long de la formation."
+      title: "Quizzes and practical exercises",
+      description: "Consolidate your learning with practical exercises and interactive quizzes throughout the training."
     },
     {
       icon: <LifeBuoy className="training-benefits__card-icon" aria-hidden="true" />,
-      title: "Support direct",
-      description: "Bénéficiez d'un support direct via le système de Q/R Udemy pour résoudre vos questions."
+      title: "Direct support",
+      description: "Benefit from direct support via Udemy's Q&A system to resolve your questions."
     },
     {
       icon: <Upload className="training-benefits__card-icon" aria-hidden="true" />,
-      title: "Mises à jour régulières",
-      description: "Le contenu est régulièrement mis à jour pour rester en phase avec les dernières évolutions d'Elasticsearch."
+      title: "Regular updates",
+      description: "Content is regularly updated to stay in line with the latest Elasticsearch developments."
     },
     {
       icon: <Video className="training-benefits__card-icon" aria-hidden="true" />,
-      title: "Vidéos HD détaillées",
-      description: "Des démonstrations claires et des explications détaillées pour assimiler rapidement les concepts."
+      title: "Detailed HD videos",
+      description: "Clear demonstrations and detailed explanations to quickly grasp concepts."
     }
   ];
 
   return (
     <section id="training-benefits" className="training-benefits" ref={sectionRef}>
       <div className="training-benefits__container">
-        <h2 className="training-benefits__title">Les avantages de mes formations</h2>
+        <h2 className="training-benefits__title">The advantages of my training</h2>
         <p className="training-benefits__subtitle">
-          Que vous choisissiez ma formation Udemy ou une formation en entreprise, voici ce qui fait la différence
+          Whether you choose my Udemy training or corporate training, here's what makes the difference
         </p>
         
         <div className="training-benefits__cards">

@@ -9,42 +9,42 @@ function TrainingList() {
   const trainings = [
     {
       id: 1,
-      title: "Analyse des KPI de la qualité des services des réseaux télécoms 2G/3G/4G",
-      description: "Optimisez vos réseaux télécoms avec des dashboards dynamiques. Grâce à la collecte automatisée des fichiers OMC-R et à l'analyse visuelle via la suite ELK (Elasticsearch, Logstash, Kibana), nous vous aidons à surveiller efficacement la qualité de vos réseaux mobiles.",
+      title: "Analysis of KPIs for 2G/3G/4G telecom network service quality",
+      description: "Optimize your telecom networks with dynamic dashboards. Through automated collection of OMC-R files and visual analysis via the ELK suite (Elasticsearch, Logstash, Kibana), we help you effectively monitor the quality of your mobile networks.",
       icon: <Book className="training-card-icon" aria-hidden="true" />,
-      platform: "Udemy & Sessions personnalisées"
+      platform: "Udemy & Custom sessions"
     },
     {
       id: 2,
-      title: "Maîtriser Elasticsearch – De l'initiation à la certification Elastic Engineer",
-      description: "Formez-vous pas à pas jusqu'à la certification officielle. Disponible sur Udemy ou en sessions personnalisées, cette formation vous accompagne de la découverte à la maîtrise avancée d'Elasticsearch, en vue de la certification.",
+      title: "Master Elasticsearch – From beginner to Elastic Engineer certification",
+      description: "Train step by step to official certification. Available on Udemy or in custom sessions, this training takes you from discovery to advanced mastery of Elasticsearch, towards certification.",
       icon: <Book className="training-card-icon" aria-hidden="true" />,
-      platform: "Udemy & Sessions personnalisées"
+      platform: "Udemy & Custom sessions"
     },
     {
       id: 3,
-      title: "Monitoring & Observabilité avec la stack ELK",
-      description: "Apprenez à surveiller vos systèmes efficacement. Une formation pratique sur la configuration des Beats, la gestion des logs, l'analyse des métriques, et la création de dashboards dans Kibana.",
+      title: "Monitoring & Observability with the ELK stack",
+      description: "Learn to monitor your systems effectively. Practical training on Beats configuration, log management, metrics analysis, and dashboard creation in Kibana.",
       icon: <Activity className="training-card-icon" aria-hidden="true" />,
-      platform: "Sessions personnalisées"
+      platform: "Custom sessions"
     },
     {
       id: 4,
-      title: "Collecte & traitement des données avec ELK",
-      description: "Automatisez le traitement de vos données. Formation axée sur Logstash et les pipelines d'ingestion, pour traiter et enrichir vos données avant indexation dans Elasticsearch.",
+      title: "Data collection & processing with ELK",
+      description: "Automate your data processing. Training focused on Logstash and ingestion pipelines, to process and enrich your data before indexing in Elasticsearch.",
       icon: <Database className="training-card-icon" aria-hidden="true" />,
-      platform: "Sessions personnalisées"
+      platform: "Custom sessions"
     },
     {
       id: 5,
-      title: "Comprendre les Données Télécoms",
-      description: "Du fonctionnement des réseaux mobiles à l'analyse de leurs données. Un parcours unique combinant théorie des télécoms (2G/3G/4G), formats de données réseau, et cas pratiques de traitement avec ELK.",
+      title: "Understanding Telecom Data",
+      description: "From mobile network operation to data analysis. A unique journey combining telecom theory (2G/3G/4G), network data formats, and practical processing cases with ELK.",
       icon: <Radio className="training-card-icon" aria-hidden="true" />,
-      platform: "Sessions personnalisées"
+      platform: "Custom sessions"
     }
   ];
 
-  // Observer pour l'animation au scroll
+  // Observer for scroll animation
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -68,7 +68,7 @@ function TrainingList() {
     };
   }, []);
 
-  // Fonction pour gérer le focus via clavier
+  // Function to handle keyboard focus
   const handleKeyDown = (e, id) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -79,8 +79,8 @@ function TrainingList() {
   return (
     <section id="training-list" className="training-list-section" aria-labelledby="training-heading">
       <div className="training-list-container">
-        <h2 id="training-heading" className="training-list-heading">Formations Spécialisées</h2>
-        <p className="training-list-subheading">Expertise en Elasticsearch, ELK Stack et Données Télécoms</p>
+        <h2 id="training-heading" className="training-list-heading">Specialized Training</h2>
+        <p className="training-list-subheading">Expertise in Elasticsearch, ELK Stack and Telecom Data</p>
         
         <div className="training-list-grid">
           {trainings.map((training, index) => (
@@ -109,11 +109,11 @@ function TrainingList() {
                 <p className="training-card-description">{training.description}</p>
                 <div className="training-card-footer">
                   <div className="training-card-platform">
-                    <span className="training-card-platform-label">Disponible sur:</span>
+                    <span className="training-card-platform-label">Available on:</span>
                     <span className="training-card-platform-value">{training.platform}</span>
                   </div>
-                  <button className="training-card-button" aria-label={`En savoir plus sur ${training.title}`}>
-                    En savoir plus
+                  <button className="training-card-button" aria-label={`Learn more about ${training.title}`}>
+                    Learn more
                   </button>
                 </div>
               </div>

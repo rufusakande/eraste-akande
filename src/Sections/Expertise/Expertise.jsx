@@ -40,10 +40,10 @@ const Expertise = () => {
     };
   }, []);
 
-  // Réinitialiser les références lors des re-rendus
+  // Reset references on re-renders
   itemsRef.current = [];
 
-  // Fonction pour ajouter des références aux éléments
+  // Function to add references to elements
   const addToRefs = (el) => {
     if (el && !itemsRef.current.includes(el)) {
       itemsRef.current.push(el);
@@ -107,12 +107,12 @@ const Expertise = () => {
       icon: "flink.svg"
     },
     {
-      name: "Réseaux 4G/LTE",
+      name: "4G/LTE Networks",
       level: 92,
       icon: "4g.svg"
     },
     {
-      name: "KPI Télécoms",
+      name: "Telecom KPIs",
       level: 90,
       icon: "kpi.svg"
     },
@@ -122,12 +122,12 @@ const Expertise = () => {
       icon: "qos.svg"
     },
     {
-      name: "Réseaux 3G/UMTS",
+      name: "3G/UMTS Networks",
       level: 85,
       icon: "3g.svg"
     },
     {
-      name: "Réseaux 2G/GSM",
+      name: "2G/GSM Networks",
       level: 83,
       icon: "2g.svg"
     },
@@ -137,7 +137,7 @@ const Expertise = () => {
       icon: "network.svg"
     },
     {
-      name: "Analyse de données télécom",
+      name: "Telecom Data Analysis",
       level: 84,
       icon: "data-analysis.svg"
     }
@@ -147,10 +147,10 @@ const Expertise = () => {
     <section id="expertise" ref={sectionRef} className="expertise-section">
       <div className="expertise-container">
         <div className="expertise-header">
-          <h2 className="expertise-title">Expertises techniques</h2>
+          <h2 className="expertise-title">Technical Expertise</h2>
           <div className="expertise-title-underline"></div>
           <p className="expertise-subtitle">
-            Stack technologique maîtrisée pour répondre à vos besoins data
+            Mastered technology stack to meet your data needs
           </p>
         </div>
 

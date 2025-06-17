@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { Linkedin, Award, FileText, Globe, BarChart } from 'lucide-react';
 import './ProfileLinks.css';
-// Import du fichier CV
-import cvPDF from '../../assets/PDF/CV_Eraste_AKANDE.pdf'; // Assurez-vous que le chemin est correct selon votre structure de dossiers
+// Import CV file
+import cvPDF from '../../assets/PDF/CV_Eraste_AKANDE.pdf'; // Make sure the path is correct according to your folder structure
 
 const ProfileLinks = () => {
   const containerRef = useRef(null);
@@ -40,10 +40,10 @@ const ProfileLinks = () => {
   }, []);
 
   const handleDownloadCV = () => {
-    // Création d'un élément <a> pour télécharger le PDF
+    // Create an <a> element to download the PDF
     const link = document.createElement('a');
     link.href = cvPDF;
-    link.download = 'Iyanou-Eraste-Akande-CV.pdf'; // Nom du fichier lors du téléchargement
+    link.download = 'Iyanou-Eraste-Akande-CV.pdf'; // File name when downloading
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -53,28 +53,28 @@ const ProfileLinks = () => {
     {
       title: "LinkedIn",
       icon: <Linkedin size={24} />,
-      description: "Consultez mon profil professionnel et mon réseau",
+      description: "View my professional profile and network",
       url: "https://www.linkedin.com/in/iyanou-eraste-akande",
       color: "#0077B5",
     },
     {
       title: "Upwork",
       icon: <Globe size={24} />,
-      description: "Découvrez mes prestations et avis clients",
+      description: "Discover my services and client reviews",
       url: "https://www.upwork.com/freelancers/~018b666e20302c5287",
       color: "#6FDA44",
     },
     {
       title: "Elastic Gold",
       icon: <Award size={24} />,
-      description: "Ma contribution en tant qu'Elastic Gold Contributor",
+      description: "My contribution as an Elastic Gold Contributor",
       url: "https://www.elastic.co/fr/community/contributors",
       color: "#FEC514",
     },
     {
-      title: "Formation Udemy",
+      title: "Udemy Training",
       icon: <BarChart size={24} />,
-      description: "Maîtriser Elasticsearch : De l'Initiation à la Certification",
+      description: "Master Elasticsearch: From Beginner to Certification",
       url: "https://www.udemy.com/course/maitriser-elasticsearch/?couponCode=ST7MT290425G1",
       color: "#EA5252",
     }
@@ -83,19 +83,19 @@ const ProfileLinks = () => {
   return (
     <section id="profileLinks" className="profile-links-section" aria-labelledby="profile-links-heading">
       <div className="profile-links-container" ref={containerRef}>
-        <h2 id="profile-links-heading" className="section-title">Me Suivre & Me Contacter</h2>
-        <p className="section-subtitle">Retrouvez mon parcours professionnel et mes prestations sur ces plateformes</p>
+        <h2 id="profile-links-heading" className="section-title">Follow Me & Contact Me</h2>
+        <p className="section-subtitle">Find my professional journey and services on these platforms</p>
        
         <div className="cv-download-container">
           <button
             className="cv-download-button"
             onClick={handleDownloadCV}
-            aria-label="Télécharger mon CV"
+            aria-label="Download my CV"
           >
             <FileText size={20} />
-            <span>Télécharger mon CV</span>
+            <span>Download my CV</span>
           </button>
-          <p className="cv-description">Un aperçu complet de mon parcours et de mes compétences techniques</p>
+          <p className="cv-description">A comprehensive overview of my journey and technical skills</p>
         </div>
        
         <div className="profile-links-grid">
@@ -106,7 +106,7 @@ const ProfileLinks = () => {
               className="profile-link-card"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Visiter mon profil ${link.title}`}
+              aria-label={`Visit my ${link.title} profile`}
               ref={el => linksRef.current[index] = el}
               style={{'--accent-color': link.color}}
             >

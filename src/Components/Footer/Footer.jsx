@@ -7,7 +7,7 @@ const Footer = () => {
   const [email, setEmail] = useState('');
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // Vérifier quand l'utilisateur a défilé suffisamment pour afficher le bouton de retour en haut
+  // Check when user has scrolled enough to show back to top button
   if (typeof window !== 'undefined') {
     window.addEventListener('scroll', () => {
       setShowScrollTop(window.scrollY > 300);
@@ -20,8 +20,8 @@ const Footer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Logique pour traiter l'abonnement à la newsletter
-    alert(`Merci de vous être abonné avec l'email: ${email}`);
+    // Logic to process newsletter subscription
+    alert(`Thank you for subscribing with email: ${email}`);
     setEmail('');
   };
 
@@ -40,10 +40,10 @@ const Footer = () => {
         <div className="footer-top">
           <div className="footer-info">
             <h3>Iyanou Eraste AKANDE</h3>
-            <p className="footer-tagline">Ingénieur de données | Consultant Elasticsearch | Formateur</p>
+            <p className="footer-tagline">Data Engineer | Elasticsearch Consultant | Trainer</p>
             <p className="footer-description">
-              Expert en engineering de données et technologies Elasticsearch, offrant des services 
-              de consultation et de formation pour optimiser vos solutions de données.
+              Expert in data engineering and Elasticsearch technologies, offering consulting 
+              and training services to optimize your data solutions.
             </p>
             <div className="footer-social">
               <a href="https://linkedin.com/" aria-label="LinkedIn" className="social-icon">
@@ -65,10 +65,10 @@ const Footer = () => {
             <div className="footer-links-column">
               <h4>Navigation</h4>
               <ul>
-                <li><a href="/">Accueil</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/services">Services</a></li>
-                <li><a href="/about">À propos</a></li>
-                <li><a href="/skills">Compétences</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/skills">Skills</a></li>
                 <li><a href="/portfolio">Portfolio</a></li>
                 <li><a href="/contact">Contact</a></li>
               </ul>
@@ -77,11 +77,11 @@ const Footer = () => {
             <div className="footer-links-column">
               <h4>Services</h4>
               <ul>
-                <li><a href="/services/data-engineering">Engineering de données</a></li>
-                <li><a href="/services/elasticsearch-consulting">Consultation Elasticsearch</a></li>
-                <li><a href="/services/elasticsearch-training">Formation Elasticsearch</a></li>
-                <li><a href="/services/data-analysis">Analyse de données</a></li>
-                <li><a href="/services/big-data">Solutions Big Data</a></li>
+                <li><a href="/services/data-engineering">Data Engineering</a></li>
+                <li><a href="/services/elasticsearch-consulting">Elasticsearch Consulting</a></li>
+                <li><a href="/services/elasticsearch-training">Elasticsearch Training</a></li>
+                <li><a href="/services/data-analysis">Data Analysis</a></li>
+                <li><a href="/services/big-data">Big Data Solutions</a></li>
               </ul>
             </div>
 
@@ -90,7 +90,7 @@ const Footer = () => {
               <ul>
                 <li>
                   <MapPin size={16} />
-                  <span>Maroc</span>
+                  <span>Morocco</span>
                 </li>
                 <li>
                   <Phone size={16} />
@@ -106,17 +106,17 @@ const Footer = () => {
 
           <div className="footer-newsletter">
             <h4>Newsletter</h4>
-            <p>Abonnez-vous pour recevoir mes derniers articles et conseils sur l'engineering de données et Elasticsearch.</p>
+            <p>Subscribe to receive my latest articles and tips on data engineering and Elasticsearch.</p>
             <form onSubmit={handleSubmit} className="newsletter-form">
               <input
                 type="email"
-                placeholder="Votre email"
+                placeholder="Your email"
                 value={email}
                 onChange={handleEmailChange}
                 required
-                aria-label="Adresse email pour la newsletter"
+                aria-label="Email address for newsletter"
               />
-              <button type="submit" aria-label="S'abonner à la newsletter">
+              <button type="submit" aria-label="Subscribe to newsletter">
                 <ArrowRight size={20} />
               </button>
             </form>
@@ -125,11 +125,11 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <div className="footer-copyright">
-            <p>&copy; {currentYear} Iyanou Eraste AKANDE. Tous droits réservés.</p>
+            <p>&copy; {currentYear} Iyanou Eraste AKANDE. All rights reserved.</p>
           </div>
           <div className="footer-legal">
-            <a href="/privacy">Politique de confidentialité</a>
-            <a href="/terms">Conditions d'utilisation</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
           </div>
         </div>
       </div>
@@ -137,7 +137,7 @@ const Footer = () => {
       <button 
         className={`scroll-top ${showScrollTop ? 'visible' : ''}`} 
         onClick={scrollToTop}
-        aria-label="Retour en haut de page"
+        aria-label="Back to top"
       >
         <ChevronUp size={24} />
       </button>

@@ -36,17 +36,17 @@ const TrainingHero = () => {
   return (
     <section id="training-hero" className="training-hero">
       <div className="training-hero__container" ref={heroRef}>
-        <h1 className="training-hero__title">Formez-vous avec un Expert Certifié</h1>
+        <h1 className="training-hero__title">Train with a Certified Expert</h1>
         <p className="training-hero__subtitle">
-          Développez vos compétences en Elasticsearch, data engineering et télécoms avec des formations 
-          conçues par un ingénieur certifié et Elastic Gold Contributor.
+          Develop your skills in Elasticsearch, data engineering, and telecommunications with training 
+          designed by a certified engineer and Elastic Gold Contributor.
         </p>
         <div className="training-hero__cta-container">
           <a href="#training-list" className="training-hero__cta training-hero__cta--primary">
-            Découvrir mes formations 
+            Discover my training 
           </a>
           <a href="#" className="training-hero__cta training-hero__cta--secondary">
-            Formation en entreprise
+            Corporate training
           </a>
         </div>
       </div>
@@ -55,17 +55,17 @@ const TrainingHero = () => {
         <div className="training-hero__stat-item">
           <Award className="training-hero__stat-icon" aria-hidden="true" />
           <span className="training-hero__stat-number">100+</span>
-          <p className="training-hero__stat-text">Professionnels formés</p>
+          <p className="training-hero__stat-text">Professionals trained</p>
         </div>
         <div className="training-hero__stat-item">
           <Users className="training-hero__stat-icon" aria-hidden="true" />
           <span className="training-hero__stat-number">4.5+</span>
-          <p className="training-hero__stat-text">Note moyenne Udemy</p>
+          <p className="training-hero__stat-text">Average Udemy rating</p>
         </div>
         <div className="training-hero__stat-item">
           <BookOpen className="training-hero__stat-icon" aria-hidden="true" />
           <span className="training-hero__stat-number">8h+</span>
-          <p className="training-hero__stat-text">De contenu exclusif</p>
+          <p className="training-hero__stat-text">Exclusive content</p>
         </div>
       </div>
     </section>

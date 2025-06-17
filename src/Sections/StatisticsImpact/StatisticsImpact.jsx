@@ -7,10 +7,10 @@ const StatisticsImpact = () => {
   const sectionRef = useRef(null);
   
   const stats = [
-    { icon: <Users size={48} />, value: 100, suffix: '+', label: 'Professionnels formés', description: 'Sur Udemy et en entreprise' },
-    { icon: <Award size={48} />, value: 95, suffix: '%', label: 'Satisfaction client', description: 'Taux de satisfaction moyen' },
-    { icon: <Clock size={48} />, value: 40, suffix: '%', label: "Gain d'efficacité", description: 'Pour les infrastructures optimisées' },
-    { icon: <Check size={48} />, value: 50, suffix: '+', label: 'Projets réalisés', description: 'De la conception à la production' }
+    { icon: <Users size={48} />, value: 100, suffix: '+', label: 'Professionals trained', description: 'On Udemy and in-company' },
+    { icon: <Award size={48} />, value: 95, suffix: '%', label: 'Client satisfaction', description: 'Average satisfaction rate' },
+    { icon: <Clock size={48} />, value: 40, suffix: '%', label: "Efficiency gain", description: 'For optimized infrastructures' },
+    { icon: <Check size={48} />, value: 50, suffix: '+', label: 'Projects completed', description: 'From design to production' }
   ];
 
   useEffect(() => {
@@ -67,8 +67,8 @@ const StatisticsImpact = () => {
   return (
     <section id="statistics-impact" ref={sectionRef} className="statistics-section">
       <div className="statistics-container">
-        <h2 className="statistics-title">Impact & Résultats</h2>
-        <p className="statistics-subtitle">L'expertise technique au service de la performance</p>
+        <h2 className="statistics-title">Impact & Results</h2>
+        <p className="statistics-subtitle">Technical expertise at the service of performance</p>
         
         <div className="statistics-grid">
           {stats.map((stat, index) => (

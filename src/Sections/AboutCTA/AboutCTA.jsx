@@ -30,17 +30,17 @@ const AboutCTA = () => {
   return (
     <section id="aboutCTA" ref={ctaRef} className="about-cta">
       <div className="about-cta__container">
-        <h2 className="about-cta__title">Prêt à optimiser votre infrastructure de données ?</h2>
+        <h2 className="about-cta__title">Ready to optimize your data infrastructure?</h2>
         <p className="about-cta__subtitle">
-          Discutons de vos besoins en matière d'Elasticsearch et de gestion de données
+          Let's discuss your Elasticsearch and data management needs
         </p>
         <div className="about-cta__buttons">
           <a href="/contact" className="about-cta__button about-cta__button--primary">
-            <span>Discutons</span>
+            <span>Let's talk</span>
             <ArrowRight size={18} />
           </a>
           <a href="/skills" className="about-cta__button about-cta__button--secondary">
-            Voir mes expertises
+            View my expertise
           </a>
         </div>
       </div>

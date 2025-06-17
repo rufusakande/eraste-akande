@@ -46,10 +46,10 @@ const Services = () => {
     };
   }, []);
 
-  // Réinitialiser les références lors des re-rendus
+  // Reset references on re-renders
   itemsRef.current = [];
 
-  // Fonction pour ajouter des références aux éléments
+  // Function to add references to elements
   const addToRefs = (el) => {
     if (el && !itemsRef.current.includes(el)) {
       itemsRef.current.push(el);
@@ -59,23 +59,23 @@ const Services = () => {
   const services = [
     {
       icon: <Database />,
-      title: "Solutions Personnalisées pour vos Données",
-      description: "Transformez vos données en leviers stratégiques avec des solutions sur mesure conçues par un expert Elasticsearch certifié.",
-      cta: "Découvrir mes solutions",
+      title: "Custom Solutions for Your Data",
+      description: "Transform your data into strategic levers with tailor-made solutions designed by a certified Elasticsearch expert.",
+      cta: "Discover my solutions",
       url: "/services/solution"
     },
     {
       icon: <Headphones />,
-      title: "Services de Consulting",
-      description: "Bénéficiez de l'expertise d'un ingénieur télécom certifié Elastic Engineer pour transformer vos données en véritables leviers stratégiques.",
-      cta: "Consulter mes services",
+      title: "Consulting Services",
+      description: "Benefit from the expertise of a certified Elastic Engineer telecommunications engineer to transform your data into true strategic levers.",
+      cta: "View my services",
       url: "/services/consulting"
     },
     {
       icon: <GraduationCap />,
-      title: "Formez-vous avec un Expert Certifié",
-      description: "Développez vos compétences en Elasticsearch, data engineering et télécoms avec des formations conçues par un ingénieur certifié et Elastic Gold Contributor.",
-      cta: "Découvrir mes formations",
+      title: "Train with a Certified Expert",
+      description: "Develop your skills in Elasticsearch, data engineering, and telecommunications with training designed by a certified engineer and Elastic Gold Contributor.",
+      cta: "Discover my training",
       url: "/services/training"
     },
   ];
@@ -84,9 +84,9 @@ const Services = () => {
     <section id="services" ref={sectionRef} className="services-section">
       <div className="services-container">
         <div className="services-header">
-          <h2 className="services-title">Mes services</h2>
+          <h2 className="services-title">My services</h2>
           <div className="services-title-underline"></div>
-          <p className="services-subtitle">Des solutions adaptées à vos besoins data</p>
+          <p className="services-subtitle">Solutions adapted to your data needs</p>
         </div>
         <div className="services-grid">
           {services.map((service, index) => (

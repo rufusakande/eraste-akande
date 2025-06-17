@@ -14,89 +14,89 @@ const projects = [
   {
     id: 1,
     title: "Elasticsearch Indexing Expert",
-    client: "Client Entreprise",
-    description: "Résolution professionnelle d'un problème d'indexation critique pour un client avec des besoins importants en Elasticsearch.",
-    feedback: "Akande est un vrai professionnel et très compétent en Elasticsearch. Il a résolu avec succès notre problème d'indexation. Hautement recommandé pour tout ce qui concerne Elasticsearch.",
+    client: "Enterprise Client",
+    description: "Professional resolution of a critical indexing problem for a client with significant Elasticsearch needs.",
+    feedback: "Akande is a true professional and very competent in Elasticsearch. He successfully solved our indexing problem. Highly recommended for anything related to Elasticsearch.",
     rating: 5.0,
-    tags: ["Elasticsearch", "Indexation", "Performance"],
+    tags: ["Elasticsearch", "Indexing", "Performance"],
     imageUrl: ElasticsearchIndexingExpertPortfolio,
-    alt: "Dashboard d'indexation Elasticsearch"
+    alt: "Elasticsearch indexing dashboard"
   },
   {
     id: 2,
-    title: "Setup Elasticsearch avec Kibana & Logstash",
+    title: "Setup Elasticsearch with Kibana & Logstash",
     client: "Mikrotik",
-    description: "Mise en place complète d'une infrastructure ELK pour la gestion des logs et la visualisation de données pour Mikrotik.",
-    feedback: "Le freelancer a fait un très bon travail, a compris les besoins du projet et les a parfaitement satisfaits... Akande montre...",
+    description: "Complete setup of ELK infrastructure for log management and data visualization for Mikrotik.",
+    feedback: "The freelancer did a very good job, understood the project needs and satisfied them perfectly... Akande shows...",
     rating: 5.0,
     tags: ["ELK Stack", "Kibana", "Logstash"],
     imageUrl: SetupElasticsearchKibanaLogstashPortfolio,
-    alt: "Architecture ELK Stack"
+    alt: "ELK Stack architecture"
   },
   {
     id: 3,
     title: "Index 365 Email Data in Elasticsearch",
-    client: "Client Email",
-    description: "Implémentation d'un système d'indexation pour données email Office 365 avec architecture optimisée pour la recherche rapide.",
-    feedback: "Akande est un plaisir à travailler avec... Tout le travail a été achevé avec succès. Merci Akande A++++",
+    client: "Email Client",
+    description: "Implementation of an indexing system for Office 365 email data with architecture optimized for fast search.",
+    feedback: "Akande is a pleasure to work with... All work was completed successfully. Thank you Akande A++++",
     rating: 5.0,
     tags: ["Office 365", "Email Indexing", "Data Pipeline"],
     imageUrl: IndexEmailDataElasticsearchPortfolio,
-    alt: "Visualisation de données email"
+    alt: "Email data visualization"
   },
   {
     id: 4,
     title: "Unstable Elastic Enterprise Search",
-    client: "Entreprise Docker",
-    description: "Résolution d'instabilités dans une implémentation Docker d'Elastic Enterprise Search avec amélioration significative des performances.",
-    feedback: "Akande a été très utile; il a résolu le problème que nous rencontrions. La communication était excellente!",
+    client: "Docker Enterprise",
+    description: "Resolution of instabilities in a Docker implementation of Elastic Enterprise Search with significant performance improvement.",
+    feedback: "Akande was very helpful; he solved the problem we were experiencing. Communication was excellent!",
     rating: 5.0,
     tags: ["Docker", "Enterprise Search", "Troubleshooting"],
     imageUrl: UnstableElasticEnterpriseSearch,
-    alt: "Architecture Docker Elasticsearch"
+    alt: "Docker Elasticsearch architecture"
   },
   {
     id: 5,
-    title: "ELK Stack pour Spring Boot avec Minikube",
-    client: "Développeur Spring Boot",
-    description: "Implémentation d'un stack ELK complet dans un environnement Kubernetes via Minikube pour une application Spring Boot.",
+    title: "ELK Stack for Spring Boot with Minikube",
+    client: "Spring Boot Developer",
+    description: "Implementation of a complete ELK stack in a Kubernetes environment via Minikube for a Spring Boot application.",
     rating: 5.0,
     tags: ["Spring Boot", "Kubernetes", "Minikube", "ELK"],
     imageUrl: ELKStackSpringBootMinikube,
-    alt: "Dashboard Spring Boot avec ELK"
+    alt: "Spring Boot dashboard with ELK"
   },
   {
     id: 6,
     title: "Data Type Correctly Formatted on Opensearch",
-    client: "Client OpenSearch",
-    description: "Correction et optimisation du formatage des types de données dans OpenSearch pour améliorer les performances de recherche et d'indexation.",
+    client: "OpenSearch Client",
+    description: "Correction and optimization of data type formatting in OpenSearch to improve search and indexing performance.",
     feedback: "",
     rating: 4.9,
     tags: ["OpenSearch", "Data Formatting", "Optimization"],
     imageUrl: DataTypeOpenSearchPortfolio,
-    alt: "Interface OpenSearch avec données formatées"
+    alt: "OpenSearch interface with formatted data"
   },
   {
     id: 7,
     title: "30 Minute Consultation",
-    client: "Client Consultation",
-    description: "Session de consultation express pour diagnostiquer et résoudre rapidement des problèmes liés à Elasticsearch.",
+    client: "Consultation Client",
+    description: "Express consultation session to quickly diagnose and resolve Elasticsearch-related issues.",
     feedback: "",
     rating: 5.0,
     tags: ["Consultation", "Elasticsearch", "Troubleshooting"],
     imageUrl: ConsultationPortfolio,
-    alt: "Session de consultation Elasticsearch"
+    alt: "Elasticsearch consultation session"
   },
   {
     id: 8,
     title: "Restart Elasticsearch for ActiveCollab",
     client: "ActiveCollab",
-    description: "Configuration et redémarrage d'une instance Elasticsearch pour l'intégration avec ActiveCollab, améliorant les fonctionnalités de recherche de la plateforme.",
+    description: "Configuration and restart of an Elasticsearch instance for integration with ActiveCollab, improving the platform's search functionality.",
     feedback: "Great experience. Got Elasticsearch up and running quickly. Very happy with result.",
     rating: 5.0,
     tags: ["ActiveCollab", "Elasticsearch", "Integration"],
     imageUrl: RestartElasticsearchPortfolio,
-    alt: "Dashboard ActiveCollab avec Elasticsearch"
+    alt: "ActiveCollab dashboard with Elasticsearch"
   }
 ];
 
@@ -106,7 +106,7 @@ const PortfolioProjects = () => {
   const carouselRef = useRef(null);
   const observerRef = useRef(null);
 
-  // Animation au défilement
+  // Scroll animation
   useEffect(() => {
     const options = {
       root: null,
@@ -150,7 +150,7 @@ const PortfolioProjects = () => {
     setTimeout(() => setAnimating(false), 500);
   };
 
-  // Fonction pour afficher les étoiles de notation
+  // Function to display rating stars
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 0; i < 5; i++) {
@@ -171,15 +171,15 @@ const PortfolioProjects = () => {
     <section id="portfolioProjects" className="portfolio-section" aria-labelledby="portfolio-heading">
       <div className="portfolio-container">
         <div className="section-header">
-          <h2 id="portfolio-heading" className="section-title">Projets Réalisés</h2>
-          <p className="section-subtitle">Découvrez les projets les mieux notés par les clients d'Iyanou Eraste AKANDE</p>
+          <h2 id="portfolio-heading" className="section-title">Completed Projects</h2>
+          <p className="section-subtitle">Discover the highest-rated projects by Iyanou Eraste AKANDE's clients</p>
         </div>
         
         <div className="portfolio-carousel-container">
           <button 
             className="carousel-control carousel-prev" 
             onClick={prevSlide}
-            aria-label="Projet précédent"
+            aria-label="Previous project"
           >
             <ChevronLeft size={24} />
           </button>
@@ -232,7 +232,7 @@ const PortfolioProjects = () => {
           <button 
             className="carousel-control carousel-next" 
             onClick={nextSlide}
-            aria-label="Projet suivant"
+            aria-label="Next project"
           >
             <ChevronRight size={24} />
           </button>
@@ -244,7 +244,7 @@ const PortfolioProjects = () => {
               key={index}
               className={`carousel-indicator ${index === activeIndex ? 'active' : ''}`}
               onClick={() => setActiveIndex(index)}
-              aria-label={`Aller au projet ${index + 1}`}
+              aria-label={`Go to project ${index + 1}`}
               aria-current={index === activeIndex}
             />
           ))}
@@ -256,9 +256,9 @@ const PortfolioProjects = () => {
             className="upwork-link"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Voir tous mes projets sur Upwork"
+            aria-label="View all my projects on Upwork"
           >
-            Voir tous mes projets sur Upwork <ExternalLink className="external-icon" size={16} />
+            View all my projects on Upwork <ExternalLink className="external-icon" size={16} />
           </a>
         </div>
 

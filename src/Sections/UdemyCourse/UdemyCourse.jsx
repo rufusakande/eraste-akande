@@ -37,35 +37,35 @@ const UdemyCourse = () => {
         <div className="udemy-course__image-container" ref={imageRef}>
           <img 
             src={ElasticsearchImg}
-            alt="Aperçu du cours Maîtriser Elasticsearch sur Udemy" 
+            alt="Preview of Master Elasticsearch course on Udemy" 
             className="udemy-course__image"
             loading="lazy"
           />
           <div className="udemy-course__badge">
             <Star className="udemy-course__badge-icon" aria-hidden="true" />
-            <span className="udemy-course__badge-text">4.5+ étoiles</span>
+            <span className="udemy-course__badge-text">4.5+ stars</span>
           </div>
         </div>
         
         <div className="udemy-course__content" ref={contentRef}>
-          <h2 className="udemy-course__title">Maîtriser Elasticsearch: De l'Initiation à la Certification</h2>
+          <h2 className="udemy-course__title">Master Elasticsearch: From Beginner to Certification</h2>
           <p className="udemy-course__description">
-            Découvrez ma formation complète disponible en français et en anglais sur Udemy. Plus de 8h de contenu 
-            exclusif pour maîtriser le déploiement, l'optimisation et l'administration d'un cluster Elasticsearch.
+            Discover my comprehensive training available in French and English on Udemy. Over 8 hours of 
+            exclusive content to master deployment, optimization, and administration of an Elasticsearch cluster.
           </p>
           
           <div className="udemy-course__features">
             <div className="udemy-course__feature">
               <Clock className="udemy-course__feature-icon" aria-hidden="true" />
-              <span className="udemy-course__feature-text">Accès à vie & mises à jour gratuites</span>
+              <span className="udemy-course__feature-text">Lifetime access & free updates</span>
             </div>
             <div className="udemy-course__feature">
               <Languages className="udemy-course__feature-icon" aria-hidden="true" />
-              <span className="udemy-course__feature-text">Disponible en français et anglais</span>
+              <span className="udemy-course__feature-text">Available in French and English</span>
             </div>
             <div className="udemy-course__feature">
               <GraduationCap className="udemy-course__feature-icon" aria-hidden="true" />
-              <span className="udemy-course__feature-text">Certificat de fin de formation</span>
+              <span className="udemy-course__feature-text">Certificate of completion</span>
             </div>
           </div>
           
@@ -75,9 +75,9 @@ const UdemyCourse = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="udemy-course__cta"
-              aria-label="Accéder à la formation sur Udemy"
+              aria-label="Access training on Udemy"
             >
-              Accéder à la formation
+              Access the training
             </a>
           </div>
         </div>

@@ -28,10 +28,10 @@ const TrainingCTA = () => {
   return (
     <section id="training-cta" className="training-cta" ref={sectionRef}>
       <div className="training-cta__container">
-        <h2 className="training-cta__title">Prêt à développer vos compétences ?</h2>
+        <h2 className="training-cta__title">Ready to develop your skills?</h2>
         <p className="training-cta__description">
-          Que vous soyez un professionnel souhaitant améliorer vos compétences ou une entreprise 
-          cherchant à former votre équipe, j'ai la solution adaptée à vos besoins.
+          Whether you're a professional looking to improve your skills or a company 
+          seeking to train your team, I have the solution adapted to your needs.
         </p>
         
         <div className="training-cta__buttons">
@@ -40,7 +40,7 @@ const TrainingCTA = () => {
             rel="noopener noreferrer"
             className="training-cta__button training-cta__button--primary"
           >
-            Mes Formation
+            My Training
             <ArrowRight className="training-cta__button-icon" aria-hidden="true" />
           </a>
           
@@ -48,7 +48,7 @@ const TrainingCTA = () => {
             href="contact" 
             className="training-cta__button training-cta__button--secondary"
           >
-            Me contacter
+            Contact me
             <ArrowRight className="training-cta__button-icon" aria-hidden="true" />
           </a>
         </div>

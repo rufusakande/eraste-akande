@@ -30,19 +30,19 @@ const AboutBio = () => {
   return (
     <section id="aboutBio" ref={bioRef} className="about-bio">
       <div className="about-bio__container">
-        <h2 className="about-bio__title">De l'INPT à l'élite de la data</h2>
+        <h2 className="about-bio__title">From INPT to the data elite</h2>
         
         <div className="about-bio__content">
           <div className="about-bio__text">
             <p className="about-bio__paragraph">
-              Diplômé de l'INPT Maroc, je mets mes compétences au service des entreprises pour transformer 
-              leurs données en leviers de décision. Mon parcours d'ingénieur en télécoms m'a naturellement 
-              conduit vers l'ingénierie des données et les technologies de monitoring avancé.
+              Graduate of INPT Morocco, I put my skills at the service of companies to transform 
+              their data into decision levers. My telecommunications engineering background naturally 
+              led me to data engineering and advanced monitoring technologies.
             </p>
             <p className="about-bio__paragraph">
-              Ma passion pour les systèmes distribués et la recherche d'information m'a amené à me spécialiser 
-              dans l'écosystème Elasticsearch, où j'ai obtenu les plus hautes certifications et reconnaissance 
-              en tant que contributeur Gold.
+              My passion for distributed systems and information retrieval led me to specialize 
+              in the Elasticsearch ecosystem, where I obtained the highest certifications and recognition 
+              as a Gold contributor.
             </p>
           </div>
           
@@ -53,7 +53,7 @@ const AboutBio = () => {
               </div>
               <div className="about-bio__stat-content">
                 <h3 className="about-bio__stat-title">Expertise</h3>
-                <p className="about-bio__stat-text">Consultant Elasticsearch certifié</p>
+                <p className="about-bio__stat-text">Certified Elasticsearch Consultant</p>
               </div>
             </div>
             
@@ -62,7 +62,7 @@ const AboutBio = () => {
                 <Award size={32} />
               </div>
               <div className="about-bio__stat-content">
-                <h3 className="about-bio__stat-title">Reconnaissance</h3>
+                <h3 className="about-bio__stat-title">Recognition</h3>
                 <p className="about-bio__stat-text">Elastic Gold Contributor</p>
               </div>
             </div>
@@ -72,8 +72,8 @@ const AboutBio = () => {
                 <Radio size={32} />
               </div>
               <div className="about-bio__stat-content">
-                <h3 className="about-bio__stat-title">Formation</h3>
-                <p className="about-bio__stat-text">Formateur Udemy 4.5+ étoiles</p>
+                <h3 className="about-bio__stat-title">Training</h3>
+                <p className="about-bio__stat-text">Udemy Trainer 4.5+ stars</p>
               </div>
             </div>
           </div>

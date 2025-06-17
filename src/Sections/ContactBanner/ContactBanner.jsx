@@ -28,10 +28,10 @@ const ContactBanner = () => {
   return (
     <section id="contactBanner" className="contact-banner" ref={bannerRef} aria-labelledby="contact-heading">
       <div className="contact-banner__container">
-        <h1 id="contact-heading" className="contact-banner__title">Discutons de votre projet</h1>
+        <h1 id="contact-heading" className="contact-banner__title">Let's discuss your project</h1>
         <p className="contact-banner__subtitle">
-          Besoin d'un expert Elasticsearch pour votre équipe ou d'une formation personnalisée ?
-          Je suis à votre écoute.
+          Need an Elasticsearch expert for your team or personalized training?
+          I'm here to listen.
         </p>
         <div className="contact-banner__decoration"></div>
       </div>
