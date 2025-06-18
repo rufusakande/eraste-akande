@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import './AboutCTA.css';
+import { Link } from 'react-router-dom';
 
 const AboutCTA = () => {
   const ctaRef = useRef(null);
@@ -35,13 +36,13 @@ const AboutCTA = () => {
           Let's discuss your Elasticsearch and data management needs
         </p>
         <div className="about-cta__buttons">
-          <a href="/contact" className="about-cta__button about-cta__button--primary">
+          <Link to="/contact" className="about-cta__button about-cta__button--primary">
             <span>Let's talk</span>
             <ArrowRight size={18} />
-          </a>
-          <a href="/skills" className="about-cta__button about-cta__button--secondary">
+          </Link>
+          <Link to="/skills" className="about-cta__button about-cta__button--secondary">
             View my expertise
-          </a>
+          </Link>
         </div>
       </div>
     </section>

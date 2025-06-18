@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Mail, Linkedin, MapPin, ExternalLink } from 'lucide-react';
 import './AlternativeContacts.css';
+import { Link } from 'react-router-dom';
 
 const AlternativeContacts = () => {
   const contactsRef = useRef(null);
@@ -40,14 +41,14 @@ const AlternativeContacts = () => {
             <p className="alternative-contacts__text">
               Contact me directly by email
             </p>
-            <a 
-              href="mailto:eraste@erasteakande.com" 
+            <Link 
+              to="mailto:eraste@erasteakande.com" 
               className="alternative-contacts__link"
               aria-label="Send an email to pro@iyanou.com"
             >
               eraste@erasteakande.com
               <ExternalLink size={16} />
-            </a>
+            </Link>
           </div>
           
           <div className="alternative-contacts__card">
@@ -58,8 +59,8 @@ const AlternativeContacts = () => {
             <p className="alternative-contacts__text">
               Let's connect on LinkedIn
             </p>
-            <a 
-              href="https://linkedin.com/in/iyanou-eraste-akande" 
+            <Link 
+              to="https://linkedin.com/in/iyanou-eraste-akande" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="alternative-contacts__link"
@@ -67,7 +68,7 @@ const AlternativeContacts = () => {
             >
               linkedin.com/in/iyanou-eraste-akande
               <ExternalLink size={16} />
-            </a>
+            </Link>
           </div>
           
           <div className="alternative-contacts__card">

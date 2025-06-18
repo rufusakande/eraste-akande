@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Award, Users, BookOpen } from 'lucide-react';
 import './TrainingHero.css';
+import { Link } from 'react-router-dom';
 
 const TrainingHero = () => {
   const heroRef = useRef(null);
@@ -42,12 +43,12 @@ const TrainingHero = () => {
           designed by a certified engineer and Elastic Gold Contributor.
         </p>
         <div className="training-hero__cta-container">
-          <a href="#training-list" className="training-hero__cta training-hero__cta--primary">
+          <Link to="#training-list" className="training-hero__cta training-hero__cta--primary">
             Discover my training 
-          </a>
-          <a href="#" className="training-hero__cta training-hero__cta--secondary">
+          </Link>
+          <Link to="#" className="training-hero__cta training-hero__cta--secondary">
             Corporate training
-          </a>
+          </Link>
         </div>
       </div>
       

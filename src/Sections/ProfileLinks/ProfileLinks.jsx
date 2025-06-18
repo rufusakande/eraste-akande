@@ -3,6 +3,7 @@ import { Linkedin, Award, FileText, Globe, BarChart } from 'lucide-react';
 import './ProfileLinks.css';
 // Import CV file
 import cvPDF from '../../assets/PDF/CV_Eraste_AKANDE.pdf'; // Make sure the path is correct according to your folder structure
+import { Link } from 'react-router-dom';
 
 const ProfileLinks = () => {
   const containerRef = useRef(null);
@@ -100,9 +101,9 @@ const ProfileLinks = () => {
        
         <div className="profile-links-grid">
           {profileLinks.map((link, index) => (
-            <a
+            <Link
               key={link.title}
-              href={link.url}
+              to={link.url}
               className="profile-link-card"
               target="_blank"
               rel="noopener noreferrer"
@@ -115,7 +116,7 @@ const ProfileLinks = () => {
                 <h3 className="link-title">{link.title}</h3>
                 <p className="link-description">{link.description}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

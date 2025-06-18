@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Video, Clock, Award, MessageCircle } from 'lucide-react';
 import './Formation.css';
+import { Link } from 'react-router-dom';
 
 const Formation = () => {
   const sectionRef = useRef(null);
@@ -126,12 +127,12 @@ const Formation = () => {
               ))}
             </div>
 
-            <a href="https://www.udemy.com/course/maitriser-elasticsearch/?couponCode=ST7MT290425G1" className="formation-cta" aria-label="Access training on Udemy">
+            <Link to="https://www.udemy.com/course/master-elasticsearch/" className="formation-cta" aria-label="Access training on Udemy">
               <span>Access the training</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="formation-cta-icon">
                 <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

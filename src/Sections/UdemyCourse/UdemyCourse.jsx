@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { Star, Clock, Languages, GraduationCap } from 'lucide-react';
 import './UdemyCourse.css';
 import ElasticsearchImg from '../../assets/Images/Elasticsearch.webp'
+import { Link } from 'react-router-dom';
 
 const UdemyCourse = () => {
   const sectionRef = useRef(null);
@@ -70,15 +71,15 @@ const UdemyCourse = () => {
           </div>
           
           <div className="udemy-course__cta-container">
-            <a 
-              href="https://www.udemy.com/course/maitriser-elasticsearch/?couponCode=ST7MT290425G1" 
+            <Link 
+              to="https://www.udemy.com/course/master-elasticsearch/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="udemy-course__cta"
               aria-label="Access training on Udemy"
             >
               Access the training
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import './Hero.css';
 import iyanuEraste from '../../assets/Images/erasteAkande.webp';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   // Array containing titles and subtitles
@@ -58,12 +59,12 @@ const Hero = () => {
             </p>
           </div>
           <div className="hero-cta">
-            <a href="/contact" className="cta-button primary">
+            <Link to="/contact" className="cta-button primary">
               Let's talk <ArrowRight size={18} className="cta-icon" />
-            </a>
-            <a href="/skills" className="cta-button secondary">
+            </Link>
+            <Link to="/skills" className="cta-button secondary">
               View my expertise
-            </a>
+            </Link>
           </div>
         </div>
         <div className="hero-visual">

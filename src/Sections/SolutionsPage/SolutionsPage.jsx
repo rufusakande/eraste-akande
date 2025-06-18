@@ -4,6 +4,7 @@ import './SolutionsPage.css';
 import servicesReseauTelecomImg from '../../assets/Images/Optimisation_de_la_Qualite_de_Service_des_Reseaux_Mobiles.webp';
 import SurveillanceAvanceInfrastructureImg from '../../assets/Images/Surveillance_Avance_Infrastructure_Cloud.webp';
 import TransformationDonneesImg from '../../assets/Images/Transformation_des_Donnees.webp';
+import { Link } from 'react-router-dom';
 
 function SolutionsPage () {
   // Refs for animation elements
@@ -55,9 +56,9 @@ function SolutionsPage () {
           <h1 id="solutions-heading">Custom Solutions for Your Data</h1>
           <p>Transform your data into strategic levers with tailor-made solutions designed by a certified Elasticsearch expert.</p>
           <div className="solutions-cta">
-            <a href="/contact" className="solutions-primary-btn" aria-label="Discuss your project">
+            <Link to="/contact" className="solutions-primary-btn" aria-label="Discuss your project">
               Discuss your project <ArrowRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -163,7 +164,7 @@ function SolutionsPage () {
                 <li>25% improvement in perceived quality of service</li>
                 <li>Centralized dashboards for decision-making</li>
               </ul>
-              <a href="/contact" className="case-link">Learn more <ArrowRight size={16} /></a>
+              <Link to="/contact" className="case-link">Learn more <ArrowRight size={16} /></Link>
             </div>
             <div className="case-image" aria-hidden="true">
               <div className="case-placeholder">
@@ -197,7 +198,7 @@ function SolutionsPage () {
                 <li>Complete visibility on application performance</li>
                 <li>20% reduction in infrastructure costs through optimization</li>
               </ul>
-              <a href="/contact" className="case-link">Learn more <ArrowRight size={16} /></a>
+              <Link to="/contact" className="case-link">Learn more <ArrowRight size={16} /></Link>
             </div>
           </div>
           
@@ -234,12 +235,12 @@ function SolutionsPage () {
           <h2 id="cta-heading">Ready to Transform Your Data into Strategic Advantage?</h2>
           <p>Let's discuss your project and solutions adapted to your specific needs together.</p>
           <div className="cta-buttons">
-            <a href="/contact" className="solutions-primary-btn">
+            <Link to="/contact" className="solutions-primary-btn">
               Request a consultation <ArrowRight size={18} />
-            </a>
-            <a href="/skills" className="solutions-secondary-btn">
+            </Link>
+            <Link to="/skills" className="solutions-secondary-btn">
               Discover my expertise
-            </a>
+            </Link>
           </div>
         </div>
       </section>

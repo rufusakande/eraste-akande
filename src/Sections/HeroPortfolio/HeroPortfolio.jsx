@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './HeroPortfolio.css';
 import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroPortfolio = () => {
   const contentRef = useRef(null);
@@ -62,9 +63,9 @@ const HeroPortfolio = () => {
             Discover my optimization and Elastic Stack implementation projects that have enabled my clients to improve their decision-making and operational performance.
           </p>
           <div ref={ctaRef} className="hero-portfolio__cta">
-            <a href="#projects" className="hero-portfolio__button">
+            <Link to="#projects" className="hero-portfolio__button">
               Explore my projects <ChevronRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
         <div ref={imageRef} className="hero-portfolio__illustration">

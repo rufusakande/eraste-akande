@@ -101,12 +101,12 @@ const Services = () => {
               </div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
-              <a href={service.url}>
+              <Link to={service.url}>
                 <button className="service-cta">
                   {service.cta}
                   <span className="service-cta-arrow">→</span>
                 </button>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

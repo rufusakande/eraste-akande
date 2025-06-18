@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import './CallToAction.css';
+import { Link } from 'react-router-dom';
 
 const CallToAction = () => {
   const ctaRef = useRef(null);
@@ -44,12 +45,12 @@ const CallToAction = () => {
           </p>
           
           <div className="call-to-action__buttons">
-            <a href="/contact" className="call-to-action__button call-to-action__button--primary">
+            <Link to="/contact" className="call-to-action__button call-to-action__button--primary">
               Schedule an appointment <ArrowRight size={18} className="call-to-action__button-icon" aria-hidden="true" />
-            </a>
-            <a href="/services/training" className="call-to-action__button call-to-action__button--secondary">
+            </Link>
+            <Link to="/services/training" className="call-to-action__button call-to-action__button--secondary">
               Discover my training
-            </a>
+            </Link>
           </div>
         </div>
       </div>

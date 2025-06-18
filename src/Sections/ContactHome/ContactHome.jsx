@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Send, Mail, Phone, Linkedin, Globe, Award, BarChart } from 'lucide-react';
 import './ContactHome.css';
+import { Link } from 'react-router-dom';
 
 const ContactHome = () => {
   const [formData, setFormData] = useState({
@@ -121,9 +122,9 @@ const ContactHome = () => {
         <div className="profile-links-section" ref={profileLinksRef}>
           <div className="profile-links-container">
             {profileLinks.map((link, index) => (
-              <a 
+              <Link 
                 key={index} 
-                href={link.url} 
+                to={link.url} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="profile-link-card"
@@ -136,7 +137,7 @@ const ContactHome = () => {
                   <h3 className="profile-link-title">{link.title}</h3>
                   <p className="profile-link-description">{link.description}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

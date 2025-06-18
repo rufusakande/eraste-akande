@@ -1,6 +1,7 @@
 // PointsForts.jsx
 import { Award, Globe, GraduationCap, Network, FileText } from 'lucide-react';
 import './PointsForts.css';
+import { Link } from 'react-router-dom';
 
 const PointsForts = () => {
   const points = [
@@ -33,7 +34,7 @@ const PointsForts = () => {
       icon: <FileText size={36} />,
       title: "Author of 4G QoS Project",
       description: "Detailed project on 4G QoS monitoring, including network architecture and QoS indicators.",
-      lien: "https://www.researchgate.net/publication/376679223_VDR_and_PDIA3_Are_Essential_for_Activation_of_Calcium_Signaling_and_Membrane_Response_to_125OH2D3_in_Squamous_Cell_Carcinoma_Cells"
+      lien: "https://fr.scribd.com/document/740152086/Developpement-d-une-solution-de-monitoring-et-d-analyse-des-performances-4G"
     },
   ];
 
@@ -56,12 +57,12 @@ const PointsForts = () => {
               <h3 className="point-fort-title">{point.title}</h3>
               <p className="point-fort-description">{point.description}</p>
               {point.lien && <p className="point-fort-description">
-                <a target="_blank"
+                <Link target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Read the document"
-                  href={point.lien}>
+                  to={point.lien}>
                     Read the document
-                </a>
+                </Link>
               </p>}
             </div>
           ))}

@@ -9,6 +9,7 @@ import ELKStackSpringBootMinikube from '../../assets/Images/ELK_Stack_Spring_Boo
 import DataTypeOpenSearchPortfolio from '../../assets/Images/Data_Type_Opensearch_Portfolio.webp';
 import ConsultationPortfolio from '../../assets/Images/30_Minute_Consultation_Portfolio.webp';
 import RestartElasticsearchPortfolio from '../../assets/Images/Restart_Elasticsearch_ActiveCollab_Portfolio.webp';
+import { Link } from 'react-router-dom';
 
 const projects = [
   {
@@ -251,15 +252,15 @@ const PortfolioProjects = () => {
         </div>
         
         <div className="portfolio-cta">
-          <a 
-            href="https://www.upwork.com/freelancers/~018b666e20302c5287" 
+          <Link 
+            to="https://www.upwork.com/freelancers/~018b666e20302c5287" 
             className="upwork-link"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View all my projects on Upwork"
           >
             View all my projects on Upwork <ExternalLink className="external-icon" size={16} />
-          </a>
+          </Link>
         </div>
 
       </div>

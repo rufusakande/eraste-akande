@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { Users, Building, Clock, Map } from 'lucide-react';
 import './CorporateTraining.css';
 import ElasticsearchImg from '../../assets/Images/Elasticsearch.webp'
+import { Link } from 'react-router-dom';
 
 const CorporateTraining = () => {
   const sectionRef = useRef(null);
@@ -84,9 +85,9 @@ const CorporateTraining = () => {
             </div>
           </div>
           
-          <a href="contact" className="corporate-training__cta">
+          <Link to="/contact" className="corporate-training__cta">
             Request a quote
-          </a>
+          </Link>
         </div>
         
         <div className="corporate-training__image-container" ref={imageRef}>

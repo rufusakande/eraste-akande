@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { ExternalLink, BookOpen, Shield, Compass, Database, Server, Bell, Search, FileText } from 'lucide-react';
 import './ConsultingPage.css';
+import { Link } from 'react-router-dom';
 
 const ConsultingPage = () => {
   const sectionRef = useRef(null);
@@ -147,15 +148,15 @@ const ConsultingPage = () => {
           ))}
         </div>
         <div id='upworkCTA' className="portfolio-cta">
-          <a 
-            href="https://www.upwork.com/freelancers/~018b666e20302c5287" 
+          <Link 
+            to="https://www.upwork.com/freelancers/~018b666e20302c5287" 
             className="upwork-link"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View my services on Upwork"
           >
             View my services on Upwork <ExternalLink className="external-icon" size={16} />
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -200,8 +201,8 @@ const ConsultingPage = () => {
           get the most out of your data.
         </p>
         <div className="cta-buttons">
-          <a href="/contact" className="btn-primary">Request a free audit</a>
-          <a href="/services/training" className="btn-secondary">Discover my training</a>
+          <Link to="/contact" className="btn-primary">Request a free audit</Link>
+          <Link to="/services/training" className="btn-secondary">Discover my training</Link>
         </div>
       </section>
     </main>

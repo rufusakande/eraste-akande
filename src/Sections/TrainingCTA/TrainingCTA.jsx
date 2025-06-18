@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import './TrainingCTA.css';
+import { Link } from 'react-router-dom';
 
 const TrainingCTA = () => {
   const sectionRef = useRef(null);
@@ -35,22 +36,22 @@ const TrainingCTA = () => {
         </p>
         
         <div className="training-cta__buttons">
-          <a 
-            href="#training-list"
+          <Link 
+            to="#training-list"
             rel="noopener noreferrer"
             className="training-cta__button training-cta__button--primary"
           >
             My Training
             <ArrowRight className="training-cta__button-icon" aria-hidden="true" />
-          </a>
+          </Link>
           
-          <a 
-            href="contact" 
+          <Link 
+            to="contact" 
             className="training-cta__button training-cta__button--secondary"
           >
             Contact me
             <ArrowRight className="training-cta__button-icon" aria-hidden="true" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
